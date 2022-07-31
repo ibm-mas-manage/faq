@@ -3,9 +3,13 @@
 ## What's new?
 
 **OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.
+
 **Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.
+
 **Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. 
+
 **Integration:** RMI is replaced by REST API.
+
 **Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.
 
 ## Manage
