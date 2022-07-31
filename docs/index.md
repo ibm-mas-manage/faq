@@ -217,7 +217,7 @@ https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring
 |CRD| A CRD defines object kinds and lets the API Server handle the entire lifecycle.|
 |CR| A CR is an object that extends the Kubernetes API. CR is the instance of CRD. |
 |Deployment| OpenShift Container Platform deployments provide fine-grained management over common user applications. They are described using three separate API objects: 
-- A deployment configuration, which describes the desired state of a particular component of the application as a pod template
-- One or more replication controllers, which contain a point-in-time record of the state of a deployment configuration as a pod template.
-- One or more pods, which represent an instance of a particular version of an application. |
+]|- A deployment configuration, which describes the desired state of a particular component of the application as a pod template
+||- One or more replication controllers, which contain a point-in-time record of the state of a deployment configuration as a pod template.
+||- One or more pods, which represent an instance of a particular version of an application. |
 |POD| A POD is the core building block for running applications in a OpenShift cluster; a deployment is a management tool used to control the way pods behave.|
