@@ -1,23 +1,15 @@
 # mkdocs serve
 
-site_name: Backup and Restore
+site_name: Frequently Asked Questions
 
-site_url: https://ibm-mas-manage.github.io/backup-restore/
+site_url: https://ibm-mas-manage.github.io/faq/
 
 repo_name: GitHub
-repo_url: https://github.com/ibm-mas-manage/backup-restore
+repo_url: https://github.com/ibm-mas-manage/faq
 edit_uri: blob/master/docs/
 
 nav:
-  #- 'Home': index.md
-  #- 'Changes': changes.md
-  - 'Backup and Restore': index.md
-  #  - 'OCP': playbooks/ocp.md
-  #  - 'Install Core': playbooks/oneclick-core.md
-  #  - 'Add IoT': playbooks/oneclick-iot.md
-  #  - 'Add Manage': playbooks/oneclick-manage.md
-  #  - 'Add Monitor': playbooks/oneclick-monitor.md
-  
+  - 'Frequently Asked Questions': index.md
 
 theme:
   name: readthedocs
