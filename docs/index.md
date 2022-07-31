@@ -1,16 +1,16 @@
 # Manage FAQs (MAS 8.8/Manage 8.5)
 
-## What's new?
+- ** 1. What's new?**
 
-**OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.
-**Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.
-**Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. 
-**Integration:** RMI is replaced by REST API.
-**Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.
+	- **OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.
+	- **Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.
+	- **Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. 
+	- **Integration:** RMI is replaced by REST API.
+	- **Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.
 
 ## Manage
-**1. Do the operators need a special configuration?**
-<i>Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.</i>
+- **Do the operators need a special configuration?**
+	- <i>Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.</i>
 
 
 **2. What is the use of the ingress controller?**
