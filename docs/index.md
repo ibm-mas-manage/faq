@@ -1,7 +1,7 @@
 # Manage FAQs (MAS 8.8/Manage 8.5)
 
 ## What's new?
-
+<p style='color:blue'>
 **OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.
 
 **Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.
@@ -11,19 +11,20 @@
 **Integration:** RMI is replaced by REST API.
 
 **Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.
-
+</p>
 
 ## General
 **Do the operators need a special configuration?**
-
+<p style='color:blue'>
 Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster. 
+</p>
 
 **What is the use of the ingress controller?**
-
 
 Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications. 
 
 **What are the benefits of moving to OpenShift? More robust, quicker time to deliver infrastructure, do you already have a list?**
+
 There are a number of items:
 - Portability between cloud/on-prem environments
 - Faster deployment compared to the traditional deployment model
