@@ -138,6 +138,7 @@
 
 	<span style="color:navy">
 	RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. 
+	
 	RMI to Rest API: </span><https://www.youtube.com/watch?v=qY-xLlnmdI8>
 
 
