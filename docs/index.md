@@ -4,9 +4,13 @@
 - ** What's new?**
 
 	<i>- **OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.
+	
 	- **Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.
+	
 	- **Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. 
+	
 	- **Integration:** RMI is replaced by REST API.
+	
 	- **Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.</i>
 
 
@@ -22,12 +26,13 @@
 
 - **What are the benefits of moving to OpenShift? More robust, quicker time to deliver infrastructure, do you already have a list?**
 
-	<i>There are a number of items:
-	- Portability between cloud/on-prem environments
-	- Faster deployment compared to the traditional deployment model
-	- More robust, resilient, HA, and elasticity through containerization and container orchestration
-	- Consistency through the operator model, repeatable deployment 
-	- Capabilities for automating and streamlining the development process</i>
+	<i>- There are a number of items:
+	
+		- Portability between cloud/on-prem environments
+		- Faster deployment compared to the traditional deployment model
+		- More robust, resilient, HA, and elasticity through containerization and container orchestration
+		- Consistency through the operator model, repeatable deployment 
+		- Capabilities for automating and streamlining the development process</i>
  
  
 - **Can you please elaborate on ibm icr.io?**
@@ -37,15 +42,16 @@
  
 - **For organizations that are on windows, are there options or only options to provision new RHEL envs /  move to cloud?**
 
-	<i>You can run on bare metal or in VSphere.  
+	<i>You can run on bare metal or in VSphere.  See also:</i>
 	
-	See also https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview</i>
+		https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview
 
 
 - **What is the one big limitation of moving to OpenShift?**
 
-	<i>- Potentially more hardware is needed for smaller installations
-	- Short term learning curve (like any new technology)</i>
+	<i>- Potentially more hardware is needed for smaller installations.
+	
+	- Short term learning curve (like any new technology.</i>
 
 
 - **Are there specific requirements for a multi-tenancy environment?**
@@ -65,7 +71,7 @@
 
 - **Where does that plan into the diagram if you were to use windows?**
 
-	<i>Windows is not supported at this time unless using vSphere</i>
+	<i>Windows is not supported at this time unless using vSphere.</i>
   
   
 - **What environment changes require application outages for users?**
@@ -74,7 +80,6 @@
 
 
 - **What databases are supported?.**
-
 
 	<i>All three databases (Db2, Db2 Warehouse, Oracle and SQL server) are supported.</i>
 
@@ -96,15 +101,13 @@
 
 - **What are the supported authentication methods in MAS?**
 
-	<i>- The following authentication methods are supported:
+	<i>The following authentication methods are supported:
 	
-		- Local IDP (username/password registered in Mongo DB)
+	- Local IDP (username/password registered in Mongo DB)
+	- LDAP
+	- SAML </i>
 		
-		- LDAP
-		
-		- SAML
-		
-		https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods</i>
+	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods
 
 
 - **What authentication is needed for inbound HTTP/SOAP/REST-based integration to Manage?**
@@ -119,9 +122,11 @@
 
 - **Is RMI supported?**
 
-	<i>RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI.
+	<i>RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. 
 	
-	RMI to Rest API: https://www.youtube.com/watch?v=qY-xLlnmdI8 </i>
+	RMI to Rest API: </i>
+	
+	https://www.youtube.com/watch?v=qY-xLlnmdI8) 
 
 
 - **Is BIRT reporting supported?**
@@ -131,16 +136,18 @@
 
 - **How to restart Manage server (other than deleting pods or restarting pods)?**
 
-	<i>You can start and stop Manage server using tools-api.
+	<i>You can start and stop Manage server using tools-api.</i>
 	
 	- Stop the Maximo Manage pods
-		- POST https://host:port/toolsapi/toolservice/managestop 
+		- POST 
+		https://host:port/toolsapi/toolservice/managestop 
 	
 	- Start the Maximo Manage pods.
-		- POST https://host:port/toolsapi/toolservice/managestart 
+		- POST 
+			https://host:port/toolsapi/toolservice/managestart 
 	
 	Detailed Instructions:
-		- https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite</i>
+		https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite
 
 - **How to deploy a custom Java class?**
 
@@ -149,13 +156,14 @@
 
 - **How do we access the System.Out logs for Maximo?**
 
-	<i>- Manage server logs are written to the standard output. You can view the logs from the OpenShift console.
+	<i>Manage server logs are written to the standard output. You can view the logs from the OpenShift console.
 	
-		- Go to your OpenShift console, navigate to the Workload/Pods menu, Select your Manage project.
-		- Check your Liberty server pods. Select the server pod to view log. 
+	- Go to your OpenShift console, navigate to the Workload/Pods menu, Select your Manage project.
+	- Check your Liberty server pods. Select the server pod to view log. 
 	
-	You can also use toolsapi to upload and retrieve logs using S3 storage.
-	https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite</i>
+	You can also use toolsapi to upload and retrieve logs using S3 storage.</i>
+	
+	https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite
 
 
 - **How can we run integrity checker?**
@@ -170,32 +178,33 @@
 
 - **How is LDAP configured in MAS?**
 
-	<i>MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process.
-	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization</i>
+	<i>MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process. </i>
+	
+	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization
 
 
 - **How is SMTP server configured?**
 
-	<i>SMTP server is configured in MAS using MAS Admin UI. 
-	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server</i>
-
+	<i>SMTP server is configured in MAS using MAS Admin UI. </i>
+	
+	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server
 
 - **How certificates can be applied?**
 
-	<i>Cerificates can be applied from MAS Admin UI.
+	<i>Cerificates can be applied from MAS Admin UI.</i>
+	
 	https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates
-	</i>
+	
 
 - **What is the upgrade process?**
 
-	<i>https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment</i>
-
+	https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment
 
 - **Are the Maximo users moved to MAS after upgrade?**
 
-	<i>Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.
+	<i>Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.<i>
 	
-	https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users</i>
+	https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users
 
 
 ## Bug Fixes
@@ -219,28 +228,26 @@
 
 - **1.What are the EAM to Manage gaps?**
 
-	<i>- The following features/functionalities are not supported yet but are in the roadmap: 
-		- Password controls/policy (password length, expiration date etc.)
-		
-		- Disable/deactivate MAS user
-		
-		- Bulk user load in MAS
-		
-		- Bring your own certificate in MAS
-		
-		- MMI does not work for multiple servers
-		
-		- Not fully airgap enabled</i>
+	<i>The following features/functionalities are not supported yet but are in the roadmap: 
+	- Password controls/policy (password length, expiration date etc.)	
+	- Disable/deactivate MAS user
+	- Bulk user load in MAS	
+	- Bring your own certificate in MAS
+	- MMI does not work for multiple servers
+	- Not fully airgap enabled</i>
 
 ## Useful Links
 
 Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage
+
 https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=upgrading-from-maximo-enterprise-asset-management-maximo-manage
 
 Manage in MAS
+
 https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb
 
 Maximo Application Suite
+
 https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring
 
 ## Acronyms
