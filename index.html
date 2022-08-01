@@ -366,12 +366,12 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>Internally generated from CR</td>
 </tr>
 <tr>
-<td>CR(Custom Resource)</td>
+<td>CR<br>(Custom Resource)</td>
 <td>A resource implemented through the Kubernetes <br> CustomResourceDefinition API. A resource is an endpoint in the Kubernetes API that stores <br> a collection of API objects of a certain kind; <br> for example, the built-in pods resource contains a collection of Pod objects.  <br> A custom resource is distinct from the built-in Kubernetes <br> resources, such as the pod and service resources.<br> Every CR is part of an API group.</td>
 <td>Manage CRs: <br> * ManageApp <br> * ManageWorkspace <br> * ManageBuild <br> * ManageDeployment <br> * ManageAppStatus<br><em> ManageServerBundles <br> <br></em> BuildDataInterpreter (for ACM)</td>
 </tr>
 <tr>
-<td>CRD (Custom Resource Definition)</td>
+<td>CRD <br>(Custom Resource Definition)</td>
 <td>Create a custom resource definition <br>to define a new custom resource. CRD is to CR as XSD is to XML. <br></td>
 <td>Manage CRs: <br> * ManageApp <br> * ManageWorkspace <br> * ManageBuild <br> * ManageDeployment <br> * ManageAppStatus<br><br> * ManageServerBundles <br> <br>* BuildDataInterpreter (for ACM)</td>
 </tr>
@@ -401,7 +401,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>Maintains the "cluster"</td>
 </tr>
 <tr>
-<td>MAS(Maximo Application Suite)</td>
+<td>MAS<br>(Maximo Application Suite)</td>
 <td>The main entry point for working with the Maximo applications (Manage, Assist, etc)</td>
 <td></td>
 </tr>
@@ -421,17 +421,17 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>In MAS, there is a namespace for Manage, a namespace for Assist, etc. <br> In the future, there can be multiple instances of an application (eg Manage) per namespace.</td>
 </tr>
 <tr>
-<td>OCP(OpenShift Container Platform)</td>
+<td>OCP<br>(OpenShift Container Platform)</td>
 <td>An on-premises platform as a service built around Docker containers <br> orchestrated and managed by Kubernetes</td>
 <td>Manages the MAS cluster</td>
 </tr>
 <tr>
-<td>OIDC(Open ID Connect)</td>
+<td>OIDC<br>(Open ID Connect)</td>
 <td>A simple identity layer on top of the OAuth 2.0 protocol</td>
 <td>Used for authentication between MAS and Manage</td>
 </tr>
 <tr>
-<td>OIDP(Open ID Provider)</td>
+<td>OIDP<br>(Open ID Provider)</td>
 <td>An identity provider, or OpenID provider (OP) is a service that <br>specializes in registering OpenID URLs or XRIs.</td>
 <td>Used for authentication between MAS and Manage</td>
 </tr>
@@ -451,12 +451,12 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>Deploying a Maximo "server"</td>
 </tr>
 <tr>
-<td>RHEL(RedHat Enterprise Linux)</td>
+<td>RHEL<br>(RedHat Enterprise Linux)</td>
 <td>Red Hat Enterprise Linux (RHEL) is a Linux-based operating system from Red Hat designed<br> for businesses. RHEL can work on desktops, on servers, in hypervisors or in the cloud. <br>Red Hat and its community-supported counterpart, <br>Fedora, are among the most widely used Linux distributions in the world.</td>
 <td></td>
 </tr>
 <tr>
-<td>RHCOS(RedHat Core Operating System)</td>
+<td>RHCOS<br>(RedHat Core Operating System)</td>
 <td>The version of RHEL that comes as part of OCP</td>
 <td>If you are installing on bare metal, then this is the operating system being used</td>
 </tr>
@@ -466,7 +466,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>Replacement of IHS in EAM.  The route plus the service is used for external access.</td>
 </tr>
 <tr>
-<td>SCIM(System for Cross-domain Identity Management)</td>
+<td>SCIM<br>(System for Cross-domain Identity Management)</td>
 <td>A set of standardized HTTP endpoints for searching, updating, <br>and deleting user records using JSON formatted data. <br>It also includes standards and guidelines <br> to define how user data should be formatted and sent from an <br>Identity provider to an application (and vice-versa)</td>
 <td>Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty</td>
 </tr>
@@ -486,12 +486,12 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>Denotes type and number of Manage pods - UI, Cron, MEA, Report, All, etc</td>
 </tr>
 <tr>
-<td>SLS(Suite License Server)</td>
+<td>SLS<br>(Suite License Server)</td>
 <td>This is the server that process AppPoints</td>
 <td>AppPoints</td>
 </tr>
 <tr>
-<td>UBI(Universal Base Image)</td>
+<td>UBI<br>(Universal Base Image)</td>
 <td>A vehicle for building and delivering certified containers and operators</td>
 <td>Used as a base for creating the Manage image(s). <br>Manage uses the RedHat UBI and Liberty UBI.</td>
 </tr>
@@ -506,7 +506,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <td>Similar to Namespace, but this is for MAS as a whole.  <br>Each workspace could have a different configuration. <br>This would be useful for sharing a MAS instance between dev and QA environments.</td>
 </tr>
 <tr>
-<td>YAML(YAML Aint Markup Language)</td>
+<td>YAML<br>(YAML Aint Markup Language)</td>
 <td>YAML is a human-readable data-serialization language. <br>It is commonly used for configuration files and in applications where data <br>is being stored or transmitted.</td>
 <td>Used to define CRDs/CRs</td>
 </tr>
@@ -558,5 +558,5 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-01 19:42:00.128973+00:00
+Build Date UTC : 2022-08-01 19:44:44.862490+00:00
 -->
