@@ -66,7 +66,6 @@
 	</span>
 	
   
-  Where does that plan into the diagram if you were to use windows?
 - **What environment changes require application outages for users?**
 
 	<span style="color:navy">
@@ -148,12 +147,14 @@
 	
 	<span style="color:navy">Detailed Instructions:</span>
 		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
+		
 
 - **How to deploy a custom Java class?**
 
 	<span style="color:navy">
 	The custom Java classes need to be packaged as a customization archive. A customization archive is a zip file and its structure is the same as the Maximo/SMP folder structure. It can include Java classes, XMLs, and database scripts. You need to follow the product.xml standard for customization. A customization archive is specified as part of the Manage CR spec so that the build process can include it. It can be accessed through the HTTP(s) or FTP(s) endpoint. Multiple customization archives are supported
 	</span>
+
 
 - **How do we access the System.Out logs for Maximo?**
 
@@ -178,6 +179,7 @@
 	<span style="color:navy">
 	Cognos is not supported in MAS 8.8. It is in the roadmap for MAS 8.9.
 	</span>
+	
 
 - **How is LDAP configured in MAS?**
 
@@ -208,7 +210,7 @@
 	<span style="color:navy">
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
 	
-	<span style="color:navy">Migrated Users: </span> <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
+	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
 
 ## Bug Fixes
@@ -272,23 +274,40 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |POD| Point of Deployment|
 
 
-## Glossary
+## Terminolgy
 
 | Term | Description | Used For |
 |------|-------|-------|----|
 |Admission Webhook|Admission webhooks are HTTP callbacks that receive admission requests and do something with them.|We are using them to control the product matrix as part of the deployment process (eg cannot install both HSE and Oil & Gas).|
-|Ansible|Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.|Used for deploying pods https://en.wikipedia.org/wiki/Ansible_(software)|
-|ConfigMap|Config maps hold configuration data for pods to consume. This is similar to a property file.|Internally generated from CR	https://v1-18.docs.kubernetes.io/docs/concepts/configuration/configmap/|
-|CR(Custom Resource)|A resource implemented through the Kubernetes CustomResourceDefinition API. A resource is an endpoint in the Kubernetes API that stores a collection of API objects of a certain kind; for example, the built-in pods resource contains a collection of Pod objects.  A custom resource is distinct from the built-in Kubernetes resources, such as the pod and service resources. Every CR is part of an API group.|Manage CRs: https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/|
-|||ManageApp|
-|||ManageWorkspace|
-|||ManageBuild|
-|||ManageDeployment|
-|||ManageAppStatus|
-|||ManageServerBundles|
-||||
-|||BuildDataInterpreter (for ACM)|
-	
+|Ansible|Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.|Used for deploying pods 
+|ConfigMap|Config maps hold configuration data for pods to consume. This is similar to a property file.|Internally generated from CR|	
+|CR(Custom Resource)|A resource implemented through the Kubernetes CustomResourceDefinition API. A resource is an endpoint in the Kubernetes API that stores a collection of API objects of a certain kind; for example, the built-in pods resource contains a collection of Pod objects.  A custom resource is distinct from the built-in Kubernetes resources, such as the pod and service resources. Every CR is part of an API group.|Manage CRs: <br> ManageApp <br> ManageWorkspace <br> ManageBuild <br> ManageDeployment <br> ManageAppStatus<br><br>ManageServerBundles <br> <br>BuildDataInterpreter (for ACM)|
+|CRD (Custom Resource Definition)| Create a custom resource definition to define a new custom resource. CRD is to CR as XSD is to XML.|Manage CRs: <br> ManageApp <br> ManageWorkspace <br> ManageBuild <br> ManageDeployment <br> ManageAppStatus<br><br>ManageServerBundles <br> <br>BuildDataInterpreter (for ACM)|
+|EFK (Elastic search, FluentD, Kibana)|The EFK stack is a modified version of the ELK stack and is comprised of:<br> Elasticsearch: An object store where all logs are stored.<br>  Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> Kibana: A web UI for Elasticsearch. <br> Once deployed in a cluster, the stack aggregates logs from all nodes and projects into Elasticsearch, and provides a Kibana UI to view any logs. Cluster administrators can view all logs, but application developers can only view logs for projects they have permission to view. The stack components communicate securely.| Used for Log Analysis |
+|Entitled Registry|Where IBM stores the images for download and use in MAS|This is where we keep binaries that will be used to build an image.|
+|Image|An image is a binary that includes all of the requirements for running a single container, as well as metadata describing its needs and capabilities.|This is what is deployed as Manage, Monitor, Assist, etc|
+|Kafka|Apache Kafka is a framework implementation of a software bus using stream-processing.|It is a pre-req for Monitor.  For Manage, it is an option that can be used as a JMS queue alternative.|
+|Kubernetes aka K8s|Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.|Maintains the "cluster"|
+|MAS(Maximo Application Suite)|The main entry point for working with the Maximo applications (Manage, Assist, etc)||
+|Manage|Formerly Maximo EAM||
+|MongoDB|A NoSQL database - a document database, which means it stores data in JSON-like documents.|MAS user and license metric information is stored here|
+|Namespace/Project|Kubernetes provides a partitioning of the resources it manages into non-overlapping sets called namespaces|In MAS, there is a namespace for Manage, a namespace for Assist, etc.  In the future, there can be multiple instances of an application (eg Manage) per namespace.|
+|OCP(OpenShift Container Platform)|An on-premises platform as a service built around Docker containers orchestrated and managed by Kubernetes|Manages the MAS cluster|
+|OIDC(Open ID Connect)|A simple identity layer on top of the OAuth 2.0 protocol|Used for authentication between MAS and Manage|
+|OIDP(Open ID Provider)|An identity provider, or OpenID provider (OP) is a service that specializes in registering OpenID URLs or XRIs.|Used for authentication between MAS and Manage|
+|Operator|Operators are software extensions to Kubernetes that make use of custom resources to manage applications and their components.|Processing within MAS|
+|Persistent Volume|A PersistentVolume (PV) is similar to drive mapping.  This API object captures the details of the implementation of the storage, be that NFS, iSCSI, or a cloud-provider-specific storage system.|In Manage we use PV to map with attached docs or other places where similar access is needed.|
+|Pods|Pods are the smallest, most basic deployable objects in Kubernetes. A Pod represents a single instance of a running process in your cluster. Pods contain one or more containers, such as Docker containers. When a Pod runs multiple containers, the containers are managed as a single entity and share the Pod's resources.|Deploying a Maximo "server"|
+|RHEL(RedHat Enterprise Linux)|Red Hat Enterprise Linux (RHEL) is a Linux-based operating system from Red Hat designed for businesses. RHEL can work on desktops, on servers, in hypervisors or in the cloud. Red Hat and its community-supported counterpart, Fedora, are among the most widely used Linux distributions in the world.||
+|RHCOS(RedHat Core Operating System)|The version of RHEL that comes as part of OCP|If you are installing on bare metal, then this is the operating system being used|
+|Route|An OpenShift route is a way to expose a service by giving it an externally-reachable hostname like www.example.com . A defined route and the endpoints identified by its service can be consumed by a router to provide named connectivity that allows external clients to reach your applications.|Replacement of IHS in EAM.  The route plus the service is used for external access.|
+|SCIM(System for Cross-domain Identity Management)|A set of standardized HTTP endpoints for searching, updating, and deleting user records using JSON formatted data. It also includes standards and guidelines to define how user data should be formatted and sent from an Identity provider to an application (and vice-versa)|Internally used for LDAP processing between MAS and Manage via WAS Liberty|
+|Scratch Image|A non-runnable image that is used to build the final image.|Each Industry Solution, Add-On and Customization package is a scratch image that is combined with the base Manage image to create the finally deployed image in MAS|
+|Service Bindings|A way to create a Kubernetes-wide specification for communicating service secrets to applications in an automated way.||
+|Service Bundle/workload|Part of the CR/CRD definition in regards to the various Manage server types|Denotes type and number of Manage pods - UI, Cron, MEA, Report, All, etc|
+|SLS(Suite License Server)|This is the server that process AppPoints|AppPoints|
+|UBI(Universal Base Image)|A vehicle for building and delivering certified containers and operators|Used as a base for creating the Manage image(s).  Manage uses the RedHat UBI and Liberty UBI.|
+|Watches|An operator subscription to the create/change/delete event of certain OCP resources.  These are specifid in watches.yaml and used internally only.|Allows for processing new selections of deployment (for example, add a language)|
+|Workspace|An aggregation of namespaces used to create a MAS sub-instance.  In 8.4 and earlier there is always only one workspace.  In the future, within MAS one could define different workspaces.|Similar to Namespace, but this is for MAS as a whole.  Each workspace could have a different configuration.  This would be useful for sharing a MAS instance between dev and QA environments.|
+|YAML(YAML Aint Markup Language)|YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted.|Used to define CRDs/CRs|
 
-
-	
