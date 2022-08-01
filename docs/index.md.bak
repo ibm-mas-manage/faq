@@ -210,7 +210,7 @@
 	<span style="color:navy">
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
 	
-	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
+	<span style="color:navy">Migrated Users: </span> <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
 
 
 ## Bug Fixes
