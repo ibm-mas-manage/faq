@@ -1,29 +1,8 @@
-# Manage FAQs (MAS 8.8/Manage 8.5)
+# FAQs (MAS 8.8/Manage 8.5)
 
-## Manage
-- ** What's new?**
+## Manage FAQs
 
-	
-	- <span style="color:navy">**OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.</span>
-	- <span style="color:navy">**Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.</span>	
-	- <span style="color:navy">**Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported.</span>	
-	- <span style="color:navy">**Integration:** RMI is replaced by REST API.</span>	
-	- <span style="color:navy">**Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.
-    </span>
-
-- **Do the operators need a special configuration?**
-
-	<span style="color:navy">
-	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
-	</span>
-
-- **What is the use of the ingress controller?**
-
-    <span style="color:navy">
-	Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications.
-	</span>
-
-- **What are the benefits of moving to OpenShift? More robust, quicker time to deliver infrastructure, do you already have a list?**
+- **What are the benefits of moving to OpenShift?**
 
 	<span style="color:navy">There are a number of items:</span>
 	
@@ -34,17 +13,31 @@
 	- <span style="color:navy">Capabilities for automating and streamlining the development process</span>
  
  
-- **Can you please elaborate on ibm icr.io?**
+- **Do the operators need a special configuration?**
+
+	<span style="color:navy">
+	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
+	</span>
+
+
+- **What is the use of the ingress controller?**
+
+    <span style="color:navy">
+	Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications.
+	</span>
+
+ 
+- **Can you please elaborate on ibm container registry(icr.io)?**
 	
 	<span style="color:navy">
-	It is IBM’s container registry. All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
+	All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
 	</span>
  
  
 - **For organizations that are on windows, are there options or only options to provision new RHEL envs /  move to cloud?**
 	
 	<span style="color:navy">
-	You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
+	Windows is not supported. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 	</span>
 
 - **What is the one big limitation of moving to OpenShift?**
@@ -57,7 +50,7 @@
 - **Are there specific requirements for a multi-tenancy environment?**
 
 	<span style="color:navy">
-	MT is not yet supported in OpenShift.
+	Multi Tenancy is not yet supported in OpenShift.
 	</span>
 
 - **Does OpenShift allow dynamic scaling?**
@@ -71,13 +64,9 @@
 	<span style="color:navy">
 	There are different hypervisor products. Windows server datacenter solution provides windows hypervisor license.
 	</span>
-
-- **Where does that plan into the diagram if you were to use windows?**
-
-	<span style="color:navy">
-	Windows is not supported at this time unless using vSphere.  
-	</span>
+	
   
+  Where does that plan into the diagram if you were to use windows?
 - **What environment changes require application outages for users?**
 
 	<span style="color:navy">
@@ -87,7 +76,7 @@
 - **What databases are supported?.**
 
 	<span style="color:navy">
-	All three databases (Db2, Db2 Warehouse, Oracle and SQL server) are supported.
+	All three databases (Db2, Db2 Warehouse, Oracle and SQL server) are supported for Manage.
 	</span>
 
 - **What Industry Solution/Add-ons are supported?**
@@ -124,7 +113,7 @@
 - **What authentication is needed for inbound HTTP/SOAP/REST-based integration to Manage?**
 
 	<span style="color:navy">
-	The API Key authentication is required for inbound HTTP/SOAP/REST-based integration to Manage. The API Key can be generated from the Manage app or REST API. The HTTP request header must include the API Key.
+	The API Key authentication is required for inbound HTTP/SOAP-based integration to Manage. The API Key can be generated from the Manage app. The HTTP request header must include the API Key. For REST-based integration, you can use OIDC as well as an API key for authentication.
 	</span>
     
 	
@@ -187,7 +176,7 @@
 - **How can we integrate Cognos with MAS?**
 
 	<span style="color:navy">
-	Cognos is not supported in MAS 8.8. It is in our roadmap for MAS 8.9.
+	Cognos is not supported in MAS 8.8. It is in the roadmap for MAS 8.9.
 	</span>
 
 - **How is LDAP configured in MAS?**
@@ -283,16 +272,23 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |POD| Point of Deployment|
 
 
-## Terminolgy
+## Glossary
 
-|Terminology|Description|
-|-------|----------|
-|OpenShift| OpenShift is the container platform that works with Kubernetes to help applications run more efficiently. The OpenShift container platform includes Kubernetes' platform and features (as well as Docker features). Kubernetes does not include OpenShift services, and it is its own standalone option, with its own unique Kubernetes dashboard.|
-|Operator| Red Hat® OpenShift® Operators automate the creation, configuration, and management of instances of Kubernetes-native applications.|
-|CRD| A CRD defines object kinds and lets the API Server handle the entire lifecycle.|
-|CR| A CR is an object that extends the Kubernetes API. CR is the instance of CRD. |
-|Deployment| OpenShift Container Platform deployments provide fine-grained management over common user applications. They are described using three separate API objects: 
-||- A deployment configuration, which describes the desired state of a particular component of the application as a pod template
-||- One or more replication controllers, which contain a point-in-time record of the state of a deployment configuration as a pod template.
-||- One or more pods, which represent an instance of a particular version of an application. |
-|POD| A POD is the core building block for running applications in a OpenShift cluster; a deployment is a management tool used to control the way pods behave.|
+| Term | Abbreviation Expanded | External Visible? | Used With | Comes with OCP | Description |	Used For |	More info |	Session Needed |
+|------ |--|---|--|-------|-------|-------|-------|
+|Admission Webhook||N|	OCP	|Y|	Admission webhooks are HTTP callbacks that receive admission requests and do something with them.|We are using them to control the product matrix as part of the deployment process (eg cannot install both HSE and Oil & Gas).||Y|
+|Ansible||Y|OCP|Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.|Used for deploying pods https://en.wikipedia.org/wiki/Ansible_(software)|
+|ConfigMap||Y|OCP|Y|Config maps hold configuration data for pods to consume. This is similar to a property file.|Internally generated from CR	https://v1-18.docs.kubernetes.io/docs/concepts/configuration/configmap/|
+|CR|Custom Resource|Y|OCP|Y|A resource implemented through the Kubernetes CustomResourceDefinition API. A resource is an endpoint in the Kubernetes API that stores a collection of API objects of a certain kind; for example, the built-in pods resource contains a collection of Pod objects.  A custom resource is distinct from the built-in Kubernetes resources, such as the pod and service resources. Every CR is part of an API group.|Manage CRs:|https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/|
+|||||||ManageApp 
+|||||||ManageWorkspace
+|||||||ManageBuild
+|||||||ManageDeployment 
+|||||||ManageAppStatus
+|||||||ManageServerBundles
+||
+|||||||BuildDataInterpreter (for ACM)	
+	
+
+
+	
