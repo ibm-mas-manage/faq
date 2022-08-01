@@ -17,14 +17,14 @@
 
 - **Do the operators need a special configuration?**
 
-	<p style="color:navy">
+	<span style="color:navy">
 	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
-	</p>
+	</span>
 
 - **What is the use of the ingress controller?**
-     
+    <span style="color:navy">
 	Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications.
-
+	</span>
 
 - **What are the benefits of moving to OpenShift? More robust, quicker time to deliver infrastructure, do you already have a list?**
 

@@ -3,16 +3,12 @@
 ## Manage
 - ** What's new?**
 
-	<span style="color:navy">
-	- **OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.
 	
-	- **Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.
-	
-	- **Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. 
-	
-	- **Integration:** RMI is replaced by REST API.
-	
-	- **Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.</i>
+	- <span style="color:navy">**OpenShift Operators:** The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.</span>
+	- <span style="color:navy">**Security & User Management:** The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.</span>	
+	- <span style="color:navy">**Application Server:** WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported.</span>	
+	- <span style="color:navy">**Integration:** RMI is replaced by REST API.</span>	
+	- <span style="color:navy">**Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.
     </span>
 
 - **Do the operators need a special configuration?**
@@ -28,13 +24,13 @@
 
 - **What are the benefits of moving to OpenShift? More robust, quicker time to deliver infrastructure, do you already have a list?**
 
-	There are a number of items:
+	<span style="color:navy">There are a number of items:</span>
 	
-	- Portability between cloud/on-prem environments
-	- Faster deployment compared to the traditional deployment model
-	- More robust, resilient, HA, and elasticity through containerization and container orchestration
-	- Consistency through the operator model, repeatable deployment 
-	- Capabilities for automating and streamlining the development process
+	- <span style="color:navy">Portability between cloud/on-prem environments</span>
+	- <span style="color:navy">Faster deployment compared to the traditional deployment model</span>
+	- <span style="color:navy">More robust, resilient, HA, and elasticity through containerization and container orchestration</span>
+	- <span style="color:navy">Consistency through the operator model, repeatable deployment</span> 
+	- <span style="color:navy">Capabilities for automating and streamlining the development process</span>
  
  
 - **Can you please elaborate on ibm icr.io?**
