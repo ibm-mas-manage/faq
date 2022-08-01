@@ -165,19 +165,22 @@
 
 - **How is LDAP configured in MAS?**
 
-	MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process. 
-	Instructions: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
+	MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process.
+	
+	LDAP configuraion: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
 
 
 - **How is SMTP server configured?**
 
 	SMTP server is configured in MAS using MAS Admin UI.
-	Instructions: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
+	
+	SMTP configuration: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
 
 - **How certificates can be applied?**
 
 	Cerificates can be applied from MAS Admin UI.
-	Instructions: <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
+	
+	Certificate configuration: <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
 	
 
 - **What is the upgrade process?**
@@ -187,6 +190,7 @@
 - **Are the Maximo users moved to MAS after upgrade?**
 
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.
+	
 	Migrated Users: <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
 
 
@@ -224,12 +228,15 @@
 ## Useful Links
 
 Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:
+
 <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=upgrading-from-maximo-enterprise-asset-management-maximo-manage>
 
 Manage in MAS:
+
 <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb>
 
 Maximo Application Suite:
+
 <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
 
 ## Acronyms
