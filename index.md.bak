@@ -213,6 +213,22 @@
 	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
 
+### EAM to Manage Gaps 
+
+- **1.What are the EAM to Manage gaps?**
+
+	<span style="color:navy">
+	The following features/functionalities are not supported yet but are in the roadmap: 
+	</span>
+	
+	- <span style="color:navy">Password controls/policy (password length, expiration date etc.) </span>	
+	- <span style="color:navy">Disable/deactivate MAS user </span>
+	- <span style="color:navy">Bulk user load in MAS </span>
+	- <span style="color:navy">Bring your own certificate in MAS </span>
+	- <span style="color:navy">MMI does not work for multiple servers </span>
+	- <span style="color:navy">Not fully airgap enabled </span>
+
+
 ## Bug Fixes
 - **How do I apply bug fixes?**
 
@@ -233,20 +249,6 @@
 	
 	A new back-up and restore instruction document will be delivered in Manage 8.4. </span>
 
-## EAM to Manage Gaps 
-
-- **1.What are the EAM to Manage gaps?**
-
-	<span style="color:navy">
-	The following features/functionalities are not supported yet but are in the roadmap: 
-	</span>
-	
-	- <span style="color:navy">Password controls/policy (password length, expiration date etc.) </span>	
-	- <span style="color:navy">Disable/deactivate MAS user </span>
-	- <span style="color:navy">Bulk user load in MAS </span>
-	- <span style="color:navy">Bring your own certificate in MAS </span>
-	- <span style="color:navy">MMI does not work for multiple servers </span>
-	- <span style="color:navy">Not fully airgap enabled </span>
 
 ## Useful Links
 
