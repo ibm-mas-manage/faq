@@ -279,43 +279,41 @@ Cognos is not supported in MAS 8.8. It is in our roadmap for MAS 8.9.
 </li>
 <li>
 <p><strong>How is LDAP configured in MAS?</strong></p>
-<p><span style="color:navy">
-MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process.</p>
-<p>LDAP configuraion:</span> <a href="https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization">https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization</a></p>
+<p><span style="color:navy">MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process.</span>
+<span style="color:navy">LDAP configuration:</span> <a href="https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization">https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization</a></p>
 </li>
 <li>
 <p><strong>How is SMTP server configured?</strong></p>
-<p><span style="color:navy">
-SMTP server is configured in MAS using MAS Admin UI.</p>
-<p>SMTP configuration: </span> <a href="https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server">https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server</a></p>
+<p><span style="color:navy">SMTP server is configured in MAS using MAS Admin UI.</span>
+<span style="color:navy">SMTP configuration: </span> <a href="https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server">https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server</a></p>
 </li>
 <li>
 <p><strong>How certificates can be applied?</strong></p>
-<p><span style="color:navy">
-Cerificates can be applied from MAS Admin UI.</p>
-<p>Certificate configuration: </span> <a href="https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates">https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates</a></p>
+<p><span style="color:navy">Cerificates can be applied from MAS Admin UI.</span>
+<span style="color:navy">Certificate configuration: </span> <a href="https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates">https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates</a></p>
 </li>
 <li>
 <p><strong>What is the upgrade process?</strong></p>
-<p><span style="color:navy">
-Upgrade Process: </span> <a href="https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment">https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment</a></p>
+<p><span style="color:navy">Upgrade Process: </span> <a href="https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment">https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment</a></p>
 </li>
 <li>
 <p><strong>Are the Maximo users moved to MAS after upgrade?</strong></p>
 <p><span style="color:navy">
-Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</p>
-<p>Migrated Users: </span> <a href="https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users">https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users</a></p>
+Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
+<span style="color:navy">Migrated Users: </span> <a href="https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users">https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users</a></p>
 </li>
 </ul>
 <h2 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link"></a></h2>
 <ul>
 <li>
 <p><strong>How do I apply bug fixes?</strong></p>
-<p><span style="color:navy">
-Patches are periodically released with APAR fixes. It can be applied using MAS Admin UI manually or automatically if you have subscription. 
-</span></p>
 <ul>
-<li><span style="color:navy">LA(one-off) fixes can be applied using customization archieve.</span></li>
+<li>
+<p><span style="color:navy">Patches are periodically released with APAR fixes. It can be applied using MAS Admin UI manually or automatically if you have subscription.</span></p>
+</li>
+<li>
+<p><span style="color:navy">LA(one-off) fixes can be applied using customization archieve.</span></p>
+</li>
 </ul>
 </li>
 <li>
@@ -325,8 +323,7 @@ The rollback process include:
 </span></p>
 <ul>
 <li>
-<p><span style="color:navy"> Roll back the configuration, which is the Manage Workspace CR and its associated secrets in the OpenShift Manage namespace.  The old image can be regenerated by the operator, or the old build can be specified to have the deployment point to revert back to what it was.
-</span></p>
+<p><span style="color:navy"> Roll back the configuration, which is the Manage Workspace CR and its associated secrets in the OpenShift Manage namespace.  The old image can be regenerated by the operator, or the old build can be specified to have the deployment point to revert back to what it was.</span></p>
 </li>
 <li>
 <p><span style="color:navy"> Restore the database. (Same as 7.6)</p>
@@ -484,5 +481,5 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-01 02:34:50.700921+00:00
+Build Date UTC : 2022-08-01 02:52:14.923575+00:00
 -->
