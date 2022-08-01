@@ -213,7 +213,7 @@
 	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
 
-- **1.What are the EAM to Manage gaps?**
+- **What are the EAM to Manage gaps?**
 
 	<span style="color:navy">
 	The following features/functionalities are not supported yet but are in the roadmap: 
