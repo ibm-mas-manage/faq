@@ -90,124 +90,117 @@
 <ul>
 <li>
 <p><strong> What's new?</strong></p>
-<p><i>- <strong>OpenShift Operators:</strong> The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.</p>
 <ul>
-<li>
-<p><strong>Security &amp; User Management:</strong> The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.</p>
-</li>
-<li>
-<p><strong>Application Server:</strong> WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. </p>
-</li>
-<li>
-<p><strong>Integration:</strong> RMI is replaced by REST API.</p>
-</li>
-<li>
-<p><strong>Message Queue:</strong> If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.</i></p>
-</li>
+<li><strong>OpenShift Operators:</strong> The installation, configuration, deployment, the upgrade is performed by the OpenShift operator.</li>
+<li><strong>Security &amp; User Management:</strong> The authentication and user management is configured in MAS. All users will be synchronized into Manage from MAS. All headless interactions (Integration, REST) require API Key for authentication.</li>
+<li><strong>Application Server:</strong> WebSphere Liberty will be used as a runtime to run the code in a containerized environment in Red Hat OpenShift. WebSphere ND and WebLogic are not supported. </li>
+<li><strong>Integration:</strong> RMI is replaced by REST API.</li>
+<li><strong>Message Queue:</strong> If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.</i></li>
 </ul>
+<p>https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview</p>
 </li>
 <li>
 <p><strong>Do the operators need a special configuration?</strong></p>
-<p><i>Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.</i></p>
+<p>Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.</p>
 </li>
 <li>
 <p><strong>What is the use of the ingress controller?</strong></p>
-<p><i>Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications.</i> </p>
+<p>Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications.</p>
 </li>
 <li>
 <p><strong>What are the benefits of moving to OpenShift? More robust, quicker time to deliver infrastructure, do you already have a list?</strong></p>
-<p><i>- There are a number of items:</p>
-<pre><code>- Portability between cloud/on-prem environments
-- Faster deployment compared to the traditional deployment model
-- More robust, resilient, HA, and elasticity through containerization and container orchestration
-- Consistency through the operator model, repeatable deployment 
-- Capabilities for automating and streamlining the development process&lt;/i&gt;
-</code></pre>
+<p>There are a number of items:</p>
+<ul>
+<li>Portability between cloud/on-prem environments</li>
+<li>Faster deployment compared to the traditional deployment model</li>
+<li>More robust, resilient, HA, and elasticity through containerization and container orchestration</li>
+<li>Consistency through the operator model, repeatable deployment </li>
+<li>Capabilities for automating and streamlining the development process</li>
+</ul>
 </li>
 <li>
 <p><strong>Can you please elaborate on ibm icr.io?</strong></p>
-<p><i>It is IBM’s container registry. All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io. </i></p>
+<p>It is IBM’s container registry. All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.</p>
 </li>
 <li>
 <p><strong>For organizations that are on windows, are there options or only options to provision new RHEL envs /  move to cloud?</strong></p>
-<p><i>You can run on bare metal or in VSphere.  See also:</i></p>
-<pre><code>https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview
-</code></pre>
+<p>You can run on bare metal or in VSphere.  See also:</p>
+<p>https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview</p>
 </li>
 <li>
 <p><strong>What is the one big limitation of moving to OpenShift?</strong></p>
-<p><i>- Potentially more hardware is needed for smaller installations.</p>
 <ul>
-<li>Short term learning curve (like any new technology.</i></li>
+<li>Potentially more hardware is needed for smaller installations.</li>
+<li>Short term learning curve (like any new technology.</li>
 </ul>
 </li>
 <li>
 <p><strong>Are there specific requirements for a multi-tenancy environment?</strong></p>
-<p><i>MT is not yet supported in OpenShift.</i></p>
+<p>MT is not yet supported in OpenShift.</p>
 </li>
 <li>
 <p><strong>Does OpenShift allow dynamic scaling?</strong></p>
-<p><i>Yes, but MAS is not fully there yet.</i></p>
+<p>Yes, but MAS is not fully there yet.</p>
 </li>
 <li>
 <p><strong>Is the hypervisor something IBM provides or is that open source?</strong></p>
-<p><i>There are different hypervisor products. Windows server datacenter solution provides windows hypervisor license.</i></p>
+<p>There are different hypervisor products. Windows server datacenter solution provides windows hypervisor license.</p>
 </li>
 <li>
 <p><strong>Where does that plan into the diagram if you were to use windows?</strong></p>
-<p><i>Windows is not supported at this time unless using vSphere.</i></p>
+<p>Windows is not supported at this time unless using vSphere.  </p>
 </li>
 <li>
 <p><strong>What environment changes require application outages for users?</strong></p>
-<p><i> change that requires the pods to go down. This is similar to today with when you need to restart the JVM.  For example, applying a new custom archive with your customization.</i></p>
+<p>change that requires the pods to go down. This is similar to today with when you need to restart the JVM.  For example, applying a new custom archive with your customization.</p>
 </li>
 <li>
 <p><strong>What databases are supported?.</strong></p>
-<p><i>All three databases (Db2, Db2 Warehouse, Oracle and SQL server) are supported.</i></p>
+<p>All three databases (Db2, Db2 Warehouse, Oracle and SQL server) are supported.</p>
 </li>
 <li>
 <p><strong>What Industry Solution/Add-ons are supported?</strong></p>
-<p><i>All Industry Solutions/Add-ons are supported. Scheduler, Calibration, Linear are included in Manage. Life Sciences is covered via Calibration.</i></p>
+<p>All Industry Solutions/Add-ons are supported. Scheduler, Calibration, Linear are included in Manage. Life Sciences is covered via Calibration.</p>
 </li>
 <li>
 <p><strong>What languages are supported?</strong></p>
-<p><i>All 23 languages are supported.</i></p>
+<p>All 23 languages are supported.</p>
 </li>
 <li>
 <p><strong>Are Oracle and SAP integrations supported?</strong></p>
-<p><i>Yes, Oracle and SAP integrations are supported.</i></p>
+<p>Yes, Oracle and SAP integrations are supported.</p>
 </li>
 <li>
 <p><strong>What are the supported authentication methods in MAS?</strong></p>
-<p><i>The following authentication methods are supported:</p>
+<p>The following authentication methods are supported:</p>
 <ul>
 <li>Local IDP (username/password registered in Mongo DB)</li>
 <li>LDAP</li>
-<li>SAML </i></li>
+<li>SAML </li>
 </ul>
 <p>https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods</p>
 </li>
 <li>
 <p><strong>What authentication is needed for inbound HTTP/SOAP/REST-based integration to Manage?</strong></p>
-<p><i>The API Key authentication is required for inbound HTTP/SOAP/REST-based integration to Manage. The API Key can be generated from the Manage app or REST API. The HTTP request header must include the API Key.</i></p>
+<p>The API Key authentication is required for inbound HTTP/SOAP/REST-based integration to Manage. The API Key can be generated from the Manage app or REST API. The HTTP request header must include the API Key.</p>
 </li>
 <li>
 <p><strong>What is the replacement of SI bus?</strong></p>
-<p><i>Liberty JMS server, as well as Kafka community edition or any other supported JMS provider, are supported. Liberty JMS is available as a bundle from MAS config UI for any MAS Manage deployment.</i></p>
+<p>Liberty JMS server, as well as Kafka community edition or any other supported JMS provider, are supported. Liberty JMS is available as a bundle from MAS config UI for any MAS Manage deployment.</p>
 </li>
 <li>
 <p><strong>Is RMI supported?</strong></p>
-<p><i>RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. </p>
-<p>RMI to Rest API: </i></p>
+<p>RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. </p>
+<p>RMI to Rest API: </p>
 <p>https://www.youtube.com/watch?v=qY-xLlnmdI8) </p>
 </li>
 <li>
 <p><strong>Is BIRT reporting supported?</strong></p>
-<p><i>Yes, BIRT is supported. Your reports will be moved automatically with the database upgrade.</i></p>
+<p>Yes, BIRT is supported. Your reports will be moved automatically with the database upgrade.</p>
 </li>
 <li>
 <p><strong>How to restart Manage server (other than deleting pods or restarting pods)?</strong></p>
-<p><i>You can start and stop Manage server using tools-api.</i></p>
+<p>You can start and stop Manage server using tools-api.</p>
 <ul>
 <li>
 <p>Stop the Maximo Manage pods</p>
@@ -229,39 +222,39 @@ https://host:port/toolsapi/toolservice/managestop </li>
 </li>
 <li>
 <p><strong>How to deploy a custom Java class?</strong></p>
-<p><i>The custom Java classes need to be packaged as a customization archive. A customization archive is a zip file and its structure is the same as the Maximo/SMP folder structure. It can include Java classes, XMLs, and database scripts. You need to follow the product.xml standard for customization. A customization archive is specified as part of the Manage CR spec so that the build process can include it. It can be accessed through the HTTP(s) or FTP(s) endpoint. Multiple customization archives are supported</i></p>
+<p>The custom Java classes need to be packaged as a customization archive. A customization archive is a zip file and its structure is the same as the Maximo/SMP folder structure. It can include Java classes, XMLs, and database scripts. You need to follow the product.xml standard for customization. A customization archive is specified as part of the Manage CR spec so that the build process can include it. It can be accessed through the HTTP(s) or FTP(s) endpoint. Multiple customization archives are supported</p>
 </li>
 <li>
 <p><strong>How do we access the System.Out logs for Maximo?</strong></p>
-<p><i>Manage server logs are written to the standard output. You can view the logs from the OpenShift console.</p>
+<p>Manage server logs are written to the standard output. You can view the logs from the OpenShift console.</p>
 <ul>
 <li>Go to your OpenShift console, navigate to the Workload/Pods menu, Select your Manage project.</li>
 <li>Check your Liberty server pods. Select the server pod to view log. </li>
 </ul>
-<p>You can also use toolsapi to upload and retrieve logs using S3 storage.</i></p>
+<p>You can also use toolsapi to upload and retrieve logs using S3 storage.</p>
 <p>https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite</p>
 </li>
 <li>
 <p><strong>How can we run integrity checker?</strong></p>
-<p><i>You can also use toolsapi to run integrity checker.</i></p>
+<p>You can also use toolsapi to run integrity checker.</p>
 </li>
 <li>
 <p><strong>How can we integrate Cognos with MAS?</strong></p>
-<p><i>Cognos is not supported in MAS 8.8. It is in our roadmap for MAS 8.9.</i></p>
+<p>Cognos is not supported in MAS 8.8. It is in our roadmap for MAS 8.9.</p>
 </li>
 <li>
 <p><strong>How is LDAP configured in MAS?</strong></p>
-<p><i>MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process. </i></p>
+<p>MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process. </p>
 <p>https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization</p>
 </li>
 <li>
 <p><strong>How is SMTP server configured?</strong></p>
-<p><i>SMTP server is configured in MAS using MAS Admin UI. </i></p>
+<p>SMTP server is configured in MAS using MAS Admin UI.</p>
 <p>https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server</p>
 </li>
 <li>
 <p><strong>How certificates can be applied?</strong></p>
-<p><i>Cerificates can be applied from MAS Admin UI.</i></p>
+<p>Cerificates can be applied from MAS Admin UI.</p>
 <p>https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates</p>
 </li>
 <li>
@@ -270,7 +263,7 @@ https://host:port/toolsapi/toolservice/managestop </li>
 </li>
 <li>
 <p><strong>Are the Maximo users moved to MAS after upgrade?</strong></p>
-<p><i>Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.<i></p>
+<p>Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</p>
 <p>https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users</p>
 </li>
 </ul>
@@ -278,12 +271,14 @@ https://host:port/toolsapi/toolservice/managestop </li>
 <ul>
 <li>
 <p><strong>How do I apply bug fixes?</strong></p>
-<p><i>Patches are periodically released with APAR fixes. It can be applied using MAS Admin UI manually or automatically if you have subscription. 
-- LA(one-off) fixes can be applied using customization archieve.</i></p>
+<p>Patches are periodically released with APAR fixes. It can be applied using MAS Admin UI manually or automatically if you have subscription. </p>
+<ul>
+<li>LA(one-off) fixes can be applied using customization archieve.</li>
+</ul>
 </li>
 <li>
 <p><strong>What is the rollback process when a patch fails at the app layer or the db layer</strong></p>
-<p><i>The rollback process include:</p>
+<p>The rollback process include:</p>
 <ul>
 <li>
 <p>Roll back the configuration, which is the Manage Workspace CR and its associated secrets in the OpenShift Manage namespace.  The old image can be regenerated by the operator, or the old build can be specified to have the deployment point to revert back to what it was.</p>
@@ -292,20 +287,22 @@ https://host:port/toolsapi/toolservice/managestop </li>
 <p>Restore the database. (Same as 7.6)</p>
 </li>
 </ul>
-<p>A new back-up and restore instruction document will be delivered in Manage 8.4.</i></p>
+<p>A new back-up and restore instruction document will be delivered in Manage 8.4.</p>
 </li>
 </ul>
 <h2 id="eam-to-manage-gaps">EAM to Manage Gaps<a class="headerlink" href="#eam-to-manage-gaps" title="Permanent link"></a></h2>
 <ul>
 <li>
 <p><strong>1.What are the EAM to Manage gaps?</strong></p>
-<p><i>The following features/functionalities are not supported yet but are in the roadmap: 
-- Password controls/policy (password length, expiration date etc.)<br />
-- Disable/deactivate MAS user
-- Bulk user load in MAS 
-- Bring your own certificate in MAS
-- MMI does not work for multiple servers
-- Not fully airgap enabled</i></p>
+<p>The following features/functionalities are not supported yet but are in the roadmap: </p>
+<ul>
+<li>Password controls/policy (password length, expiration date etc.)  </li>
+<li>Disable/deactivate MAS user</li>
+<li>Bulk user load in MAS </li>
+<li>Bring your own certificate in MAS</li>
+<li>MMI does not work for multiple servers</li>
+<li>Not fully airgap enabled</li>
+</ul>
 </li>
 </ul>
 <h2 id="useful-links">Useful Links<a class="headerlink" href="#useful-links" title="Permanent link"></a></h2>
@@ -439,5 +436,5 @@ https://host:port/toolsapi/toolservice/managestop </li>
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-01 00:38:06.071561+00:00
+Build Date UTC : 2022-08-01 00:56:01.139727+00:00
 -->
