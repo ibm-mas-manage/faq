@@ -13,7 +13,7 @@
 
 - **Do the operators need a special configuration?**
 
-	<span style="color:navy">
+	<span style="color:mediumblue">
 	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
 	</span>
 
