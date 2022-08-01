@@ -10,8 +10,6 @@
 	- **Message Queue:** If you are using SI Bus, you can use Liberty JMS server, Kafka or any other supported JMS provider.</i>
 
 
-	https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview
-
 - **Do the operators need a special configuration?**
 
 	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
@@ -42,7 +40,7 @@
 
 	You can run on bare metal or in VSphere.  See also:
 	
-	https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview
+	<https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 
 
 - **What is the one big limitation of moving to OpenShift?**
@@ -103,7 +101,7 @@
 	- LDAP
 	- SAML 
 		
-	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods
+	<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods>
 
 
 - **What authentication is needed for inbound HTTP/SOAP/REST-based integration to Manage?**
@@ -122,7 +120,7 @@
 	
 	RMI to Rest API: 
 	
-	https://www.youtube.com/watch?v=qY-xLlnmdI8) 
+	<https://www.youtube.com/watch?v=qY-xLlnmdI8>
 
 
 - **Is BIRT reporting supported?**
@@ -135,15 +133,13 @@
 	You can start and stop Manage server using tools-api.
 	
 	- Stop the Maximo Manage pods
-		- POST 
-		https://host:port/toolsapi/toolservice/managestop 
+		- POST <https://host:port/toolsapi/toolservice/managestop>
 	
 	- Start the Maximo Manage pods.
-		- POST 
-			https://host:port/toolsapi/toolservice/managestart 
+		- POST <https://host:port/toolsapi/toolservice/managestart>
 	
 	Detailed Instructions:
-		https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite
+		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
 
 - **How to deploy a custom Java class?**
 
@@ -159,7 +155,7 @@
 	
 	You can also use toolsapi to upload and retrieve logs using S3 storage.
 	
-	https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite
+	<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
 
 
 - **How can we run integrity checker?**
@@ -176,31 +172,31 @@
 
 	MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process. 
 	
-	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization
+	<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
 
 
 - **How is SMTP server configured?**
 
 	SMTP server is configured in MAS using MAS Admin UI.
 	
-	https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server
+	<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
 
 - **How certificates can be applied?**
 
 	Cerificates can be applied from MAS Admin UI.
 	
-	https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates
+	<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
 	
 
 - **What is the upgrade process?**
 
-	https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment
+	<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment>
 
 - **Are the Maximo users moved to MAS after upgrade?**
 
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.
 	
-	https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users
+	<https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
 
 
 ## Bug Fixes
@@ -236,17 +232,17 @@
 
 ## Useful Links
 
-Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage
+Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:
 
-https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=upgrading-from-maximo-enterprise-asset-management-maximo-manage
+<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=upgrading-from-maximo-enterprise-asset-management-maximo-manage>
 
-Manage in MAS
+Manage in MAS:
 
-https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb
+<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb>
 
-Maximo Application Suite
+Maximo Application Suite:
 
-https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring
+<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
 
 ## Acronyms
 
