@@ -213,6 +213,22 @@
 	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
 
+### EAM to Manage Gaps 
+
+- **1.What are the EAM to Manage gaps?**
+
+	<span style="color:navy">
+	The following features/functionalities are not supported yet but are in the roadmap: 
+	</span>
+	
+	- <span style="color:navy">Password controls/policy (password length, expiration date etc.) </span>	
+	- <span style="color:navy">Disable/deactivate MAS user </span>
+	- <span style="color:navy">Bulk user load in MAS </span>
+	- <span style="color:navy">Bring your own certificate in MAS </span>
+	- <span style="color:navy">MMI does not work for multiple servers </span>
+	- <span style="color:navy">Not fully airgap enabled </span>
+
+
 ## Bug Fixes
 - **How do I apply bug fixes?**
 
@@ -233,20 +249,6 @@
 	
 	A new back-up and restore instruction document will be delivered in Manage 8.4. </span>
 
-## EAM to Manage Gaps 
-
-- **1.What are the EAM to Manage gaps?**
-
-	<span style="color:navy">
-	The following features/functionalities are not supported yet but are in the roadmap: 
-	</span>
-	
-	- <span style="color:navy">Password controls/policy (password length, expiration date etc.) </span>	
-	- <span style="color:navy">Disable/deactivate MAS user </span>
-	- <span style="color:navy">Bulk user load in MAS </span>
-	- <span style="color:navy">Bring your own certificate in MAS </span>
-	- <span style="color:navy">MMI does not work for multiple servers </span>
-	- <span style="color:navy">Not fully airgap enabled </span>
 
 ## Useful Links
 
@@ -263,21 +265,11 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
 
-## Acronyms
-
-| Abbreviations|Description|
-|-------|----------|
-|OCP| OpenShift Container Platform |
-|MAS| Maximo Application Suite |
-|CRD| Custom Resource Definition |
-|CR| Custom Resouce|
-|POD| Point of Deployment|
-
 
 ## Terminolgy
 
 | Term | Description | Used For |
-|------|-------|-------|----|
+|------|-------|-------|
 |Admission Webhook|Admission webhooks are HTTP callbacks that receive admission requests and do something with them.|We are using them to control the product matrix as part of the deployment process (eg cannot install both HSE and Oil & Gas).|
 |Ansible|Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.|Used for deploying pods 
 |ConfigMap|Config maps hold configuration data for pods to consume. This is similar to a property file.|Internally generated from CR|	
