@@ -210,7 +210,7 @@
 	<span style="color:navy">
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
 	
-	<span style="color:navy">Migrated Users: </span> <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
+	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
 
 ## Bug Fixes
@@ -262,16 +262,6 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <span style="color:navy">Maximo Application Suite:</span>
 
 <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
-
-## Acronyms
-
-| Abbreviations|Description|
-|-------|----------|
-|OCP| OpenShift Container Platform |
-|MAS| Maximo Application Suite |
-|CRD| Custom Resource Definition |
-|CR| Custom Resouce|
-|POD| Point of Deployment|
 
 
 ## Terminolgy
