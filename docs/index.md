@@ -267,8 +267,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 | Term | Description | Used For |
 |------|-------|-------|
-              he EFK stack is a modified version of the ELK stack and is comprised of*The EFK stack is a modified version of the ELK stack and is comprised of:
-|Admission Webhook|Admission webhooks are HTTP callbacks that receive admission requests <br> and do something with them.|We are using them to control the product <br> matrix as part of the deployment process <br> (eg cannot install both HSE and Oil & Gas).|
+ Admission Webhook|Admission webhooks are HTTP callbacks that receive admission requests <br> and do something with them.|We are using them to control the product <br> matrix as part of the deployment process <br> (eg cannot install both HSE and Oil & Gas).|
 |Ansible|Ansible is an open-source software provisioning, configuration management, <br> and application-deployment tool enabling infrastructure as code.|<br>Used for deploying pods 
 |ConfigMap|Config maps hold configuration data for pods to consume. This is <br> similar to a property file.|Internally generated from CR|	
 |CR<br>(Custom Resource)|A resource implemented through the Kubernetes CustomResourceDefinition API.<br> A resource is an endpoint <br>in the Kubernetes API that stores a<br> collection of API objects of a certain kind; for example, the built-in <br> pods resource contains a collection of Pod objects. A custom resource is <br> distinct from the built-in Kubernetes <br> resources, such as the pod and service resources.<br> Every CR is part of an API group.|Manage CRs: <br>  * ManageApp <br>  * ManageWorkspace <br>  * ManageBuild <br>  * ManageDeployment <br>  * ManageAppStatus<br> * ManageServerBundles <br> <br>  * BuildDataInterpreter (for ACM)|
