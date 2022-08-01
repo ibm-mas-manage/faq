@@ -138,7 +138,6 @@
 
 	<span style="color:navy">
 	RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. 
-	
 	RMI to Rest API: </span><https://www.youtube.com/watch?v=qY-xLlnmdI8>
 
 
@@ -204,7 +203,7 @@
 - **How certificates can be applied?**
 
 	<span style="color:navy">Cerificates can be applied from MAS Admin UI.</span>
-	<span style="color:navy">Certificate configuration: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
+	<span style="color:navy">See also: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
 	
 
 - **What is the upgrade process?**
@@ -215,7 +214,7 @@
 
 	<span style="color:navy">
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
-	<span style="color:navy">Migrated Users: </span> <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
+	<span style="color:navy">See also: </span> <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
 
 
 ## Bug Fixes
