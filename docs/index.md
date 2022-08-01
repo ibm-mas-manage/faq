@@ -38,9 +38,8 @@
  
 - **For organizations that are on windows, are there options or only options to provision new RHEL envs /  move to cloud?**
 
-	You can run on bare metal or in VSphere.  See also:
-	
-	<https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
+	You can run on bare metal or in VSphere.  
+	See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 
 
 - **What is the one big limitation of moving to OpenShift?**
@@ -100,8 +99,8 @@
 	- Local IDP (username/password registered in Mongo DB)
 	- LDAP
 	- SAML 
-		
-	<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods>
+
+	Authencation Methods: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-authentication-methods>
 
 
 - **What authentication is needed for inbound HTTP/SOAP/REST-based integration to Manage?**
@@ -118,9 +117,7 @@
 
 	RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. 
 	
-	RMI to Rest API: 
-	
-	<https://www.youtube.com/watch?v=qY-xLlnmdI8>
+	RMI to Rest API: <https://www.youtube.com/watch?v=qY-xLlnmdI8>
 
 
 - **Is BIRT reporting supported?**
@@ -155,8 +152,6 @@
 	
 	You can also use toolsapi to upload and retrieve logs using S3 storage.
 	
-	<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
-
 
 - **How can we run integrity checker?**
 
@@ -171,32 +166,28 @@
 - **How is LDAP configured in MAS?**
 
 	MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process. 
-	
-	<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
+	Instructions: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
 
 
 - **How is SMTP server configured?**
 
 	SMTP server is configured in MAS using MAS Admin UI.
-	
-	<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
+	Instructions: <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
 
 - **How certificates can be applied?**
 
 	Cerificates can be applied from MAS Admin UI.
-	
-	<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
+	Instructions: <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
 	
 
 - **What is the upgrade process?**
 
-	<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment>
+	Upgrade Process: <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment>
 
 - **Are the Maximo users moved to MAS after upgrade?**
 
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.
-	
-	<https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
+	Migrated Users: <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
 
 
 ## Bug Fixes
@@ -233,15 +224,12 @@
 ## Useful Links
 
 Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:
-
 <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=upgrading-from-maximo-enterprise-asset-management-maximo-manage>
 
 Manage in MAS:
-
 <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb>
 
 Maximo Application Suite:
-
 <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
 
 ## Acronyms
