@@ -275,7 +275,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 ## Glossary
 
 | Term | Abbreviation Expanded | External Visible? | Used With | Comes with OCP | Description |	Used For |	More info |	Session Needed |
-|------|----|----|----|-------|-------|-------|----|----|
+|------|----|----|----|-------|-------|-------|----|
 |Admission Webhook||N|OCP|Y|Admission webhooks are HTTP callbacks that receive admission requests and do something with them.|We are using them to control the product matrix as part of the deployment process (eg cannot install both HSE and Oil & Gas).||Y|
 |Ansible||Y|OCP|Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code.|Used for deploying pods https://en.wikipedia.org/wiki/Ansible_(software)||
 |ConfigMap||Y|OCP|Y|Config maps hold configuration data for pods to consume. This is similar to a property file.|Internally generated from CR	https://v1-18.docs.kubernetes.io/docs/concepts/configuration/configmap/||
