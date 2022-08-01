@@ -134,13 +134,13 @@
 	<i>You can start and stop Manage server using tools-api.
 	
 	- Stop the Maximo Manage pods
-		- POST https://host:port/toolsapi/toolservice/managestop 
+	POST https://host:port/toolsapi/toolservice/managestop 
 	
 	- Start the Maximo Manage pods.
-		- POST https://host:port/toolsapi/toolservice/managestart 
+	POST https://host:port/toolsapi/toolservice/managestart 
 	
 	Detailed Instructions:
-		- https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite</i>
+	https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite</i>
 
 - **How to deploy a custom Java class?**
 
