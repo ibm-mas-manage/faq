@@ -213,9 +213,7 @@
 	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
 
-### EAM to Manage Gaps 
-
-- **1.What are the EAM to Manage gaps?**
+- **What are the EAM to Manage gaps?**
 
 	<span style="color:navy">
 	The following features/functionalities are not supported yet but are in the roadmap: 
@@ -292,7 +290,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |Route|An OpenShift route is a way to expose a service by giving it an <br>externally-reachable hostname like www.example.com. A defined route and the endpoints <br>identified by its service can be consumed by a router to provide named <br> connectivity that allows external <br> clients to reach your applications.|Replacement of IHS in EAM.  The route plus the service is used for external access.|
 |SCIM<br>(System for Cross-domain Identity Management)|A set of standardized HTTP endpoints for searching, updating, and deleting <br>user records <br> using JSON formatted data. It also includes<br> standards and guidelines to define how user data should be formatted and sent <br> from an Identity provider to an application (and vice-versa)|Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty|
 |Scratch Image|A non-runnable image that is used to build the final image.|Each Industry Solution, <br>Add-On and Customization package is a scratch image that is <br>combined with the base Manage image to create the <br>finally deployed image in MAS|
-|Service Bindings|A way to create a Kubernetes-wide specification for communicating service secrets to applications in an automated way.||
+|Service Bindings|A way to create a Kubernetes-wide specification for communicating service <br> secrets to applications in an automated way.||
 |Service Bundle/workload|Part of the CR/CRD definition in regards to the various Manage server types|Denotes type and number of Manage pods - UI, Cron, MEA, Report, All, etc|
 |SLS<br>(Suite License Server)|This is the server that process AppPoints|AppPoints|
 |UBI<br>(Universal Base Image)|A vehicle for building and delivering certified containers and operators|Used as a base for creating the Manage image(s). <br>Manage uses the RedHat UBI and Liberty UBI.|
