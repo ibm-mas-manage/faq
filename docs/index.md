@@ -13,7 +13,7 @@
 
 - **Do the operators need a special configuration?**
 
-	<span style="color:mediumblue">
+	<span style="color:navy">
 	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
 	</span>
 
@@ -34,21 +34,22 @@
  
  
 - **Can you please elaborate on ibm icr.io?**
-
+	<span style="color:navy">
 	It is IBM’s container registry. All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
+	</span>
  
  
 - **For organizations that are on windows, are there options or only options to provision new RHEL envs /  move to cloud?**
-
+	<span style="color:navy">
 	You can run on bare metal or in VSphere.  
 	See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
-
+	</span>
 
 - **What is the one big limitation of moving to OpenShift?**
-
+	<span style="color:navy">
 	- Potentially more hardware is needed for smaller installations.
 	- Short term learning curve (like any new technology.
-
+    </span>
 
 - **Are there specific requirements for a multi-tenancy environment?**
 
