@@ -138,6 +138,7 @@
 
 	<span style="color:navy">
 	RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. 
+	
 	RMI to Rest API: </span><https://www.youtube.com/watch?v=qY-xLlnmdI8>
 
 
@@ -192,17 +193,20 @@
 - **How is LDAP configured in MAS?**
 
 	<span style="color:navy">MAS uses WebSphere Liberty to synchronize with LDAP. Liberty provides a SCIM API for MAS to consume the data from LDAP repositories into the MAS user registry. MAS pushes users/groups to Manage from MAS repository using user sync process.</span>
+	
 	<span style="color:navy">LDAP configuration:</span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
 
 
 - **How is SMTP server configured?**
 
 	<span style="color:navy">SMTP server is configured in MAS using MAS Admin UI.</span>
+	
 	<span style="color:navy">SMTP configuration: </span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
 
 - **How certificates can be applied?**
 
 	<span style="color:navy">Cerificates can be applied from MAS Admin UI.</span>
+	
 	<span style="color:navy">Certificate configuration: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
 	
 
@@ -214,6 +218,7 @@
 
 	<span style="color:navy">
 	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
+	
 	<span style="color:navy">Migrated Users: </span> <https://pages.github.ibm.com/maximo/manage-playbook/upgrade/users>
 
 
