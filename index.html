@@ -367,7 +367,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>CR<br>(Custom Resource)</td>
-<td>A resource implemented through the Kubernetes <br> CustomResourceDefinition API. A resource is an endpoint in the Kubernetes API that stores <br> a collection of API objects of a certain kind; <br> for example, the built-in pods resource contains a collection of Pod objects.  <br> A custom resource is distinct from the built-in Kubernetes <br> resources, such as the pod and service resources.<br> Every CR is part of an API group.</td>
+<td>A resource implemented through the Kubernetes <br> CustomResourceDefinition API. A resource is an endpoint <br>in the Kubernetes API that stores a collection of <br> API objects of a certain kind; for example, the built-in <br> pods resource contains a collection of Pod objects.  <br> A custom resource is distinct from the built-in Kubernetes <br> resources, such as the pod and service resources.<br> Every CR is part of an API group.</td>
 <td>Manage CRs: <br> * ManageApp <br> * ManageWorkspace <br> * ManageBuild <br> * ManageDeployment <br> * ManageAppStatus<br><em> ManageServerBundles <br> <br></em> BuildDataInterpreter (for ACM)</td>
 </tr>
 <tr>
@@ -377,7 +377,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>EFK (Elastic search, FluentD, Kibana)</td>
-<td>The EFK stack is a modified version of the ELK stack <br>and is comprised of:<br> * Elasticsearch: An object store where <br>all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br> Once deployed in a cluster, the stack aggregates <br>logs from all nodes and projects into Elasticsearch, <br>and provides a Kibana UI to view any logs. Cluster administrators <br>can view all logs, but application developers can <br>only view logs for projects they have <br>permission to view. The stack components communicate <br>securely.</td>
+<td>The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where <br>all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br> Once deployed in a cluster, the stack aggregates logs from all nodes <br> and projects into Elasticsearch, and provides a Kibana UI to view any logs. <br> Cluster administrators can view all logs, but application developers can <br>only view logs for projects they have <br>permission to view. The stack components communicate <br>securely.</td>
 <td>Used for Log Analysis</td>
 </tr>
 <tr>
@@ -397,7 +397,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Kubernetes aka K8s</td>
-<td>Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services.</td>
+<td>Kubernetes is a portable, extensible, open-source platform for managing <br> containerized workloads and services.</td>
 <td>Maintains the "cluster"</td>
 </tr>
 <tr>
@@ -417,7 +417,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Namespace/Project</td>
-<td>Kubernetes provides a partitioning of the resources it <br> manages into non-overlapping sets called namespaces</td>
+<td>Kubernetes provides a partitioning of the resources it manages into non-overlapping sets called namespaces</td>
 <td>In MAS, there is a namespace for Manage, a namespace for Assist, etc. <br> In the future, there can be multiple instances of an application (eg Manage) per namespace.</td>
 </tr>
 <tr>
@@ -462,12 +462,12 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Route</td>
-<td>An OpenShift route is a way to expose a service by giving it an <br>externally-reachable hostname like www.example.com. <br>A defined route and the endpoints identified by its <br>service can be consumed by a router to provide named connectivity <br> that allows external clients to reach your applications.</td>
+<td>An OpenShift route is a way to expose a service by giving it an <br>externally-reachable hostname like www.example.com. A defined route <br> and the endpoints identified by its service can be <br>consumed by a router to provide named connectivity that allows external <br> clients to reach your applications.</td>
 <td>Replacement of IHS in EAM.  The route plus the service is used for external access.</td>
 </tr>
 <tr>
 <td>SCIM<br>(System for Cross-domain Identity Management)</td>
-<td>A set of standardized HTTP endpoints for searching, updating, <br>and deleting user records using JSON formatted data. <br>It also includes standards and guidelines <br> to define how user data should be formatted and sent from an <br>Identity provider to an application (and vice-versa)</td>
+<td>A set of standardized HTTP endpoints for searching, updating, and deleting user records <br> using JSON formatted data. It also includes standards and guidelines <br> to define how user data should be formatted and sent from an Identity provider <br> to an application (and vice-versa)</td>
 <td>Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty</td>
 </tr>
 <tr>
@@ -558,5 +558,5 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-01 19:44:44.862490+00:00
+Build Date UTC : 2022-08-01 20:01:20.708663+00:00
 -->
