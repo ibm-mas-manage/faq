@@ -41,16 +41,14 @@
 	</span>
 
 - **What is the one big limitation of moving to OpenShift?**
-
-	<span style="color:navy">
-	- Potentially more hardware is needed for smaller installations.
-	- Short term learning curve (like any new technology.
-    </span>
+	
+	- <span style="color:navy">Potentially more hardware is needed for smaller installations.</span>
+	- <span style="color:navy">Short term learning curve (like any new technology).</span>
 
 - **Are there specific requirements for a multi-tenancy environment?**
 
 	<span style="color:navy">
-	Multi Tenancy is not yet supported in OpenShift.
+	Multi-Tenancy is not yet supported in OpenShift.
 	</span>
 
 - **Does OpenShift allow dynamic scaling?**
