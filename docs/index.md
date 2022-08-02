@@ -27,14 +27,14 @@
 	</span>
 
  
-- **Can you please elaborate on ibm container registry(icr.io)?**
+- **Can you please elaborate on IBM container registry (icr.io)?**
 	
 	<span style="color:navy">
 	All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
 	</span>
  
  
-- **For organizations that are on windows, are there options or only options to provision new RHEL envs /  move to cloud?**
+- **Are there options for organizations that are on windows or only options to provision new RHEL envs/move to cloud?**
 	
 	<span style="color:navy">
 	Windows is not supported. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
@@ -56,13 +56,13 @@
 - **Does OpenShift allow dynamic scaling?**
 
 	<span style="color:navy">
-	Yes, but MAS is not fully there yet.
+	Yes, but MAS does not fully support it yet.
 	</span>
 
 - **Is the hypervisor something IBM provides or is that open source?**
 
 	<span style="color:navy">
-	There are different hypervisor products. Windows server datacenter solution provides windows hypervisor license.
+	There are different hypervisor products. IBM does not provide hypervisor.
 	</span>
 	
   
@@ -148,6 +148,18 @@
 	<span style="color:navy">Detailed Instructions:</span>
 		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
 		
+- **How can we achieve a similar functionality as multiple JVMs (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionalities accordingly?**
+	
+	<span style="color:navy">The Manage application can be deployed with different server bundles (workloads) for the processing and isolation needs.</span>
+	
+    <span style="color:navy">This table below shows the five different server bundles types: </span>
+	
+	|**Bundle Server Type**|**Description**|
+	|<span style="color:navy">All|This bundle type contains all the code.</span>|
+	|UI|This bundle type contains UI code and supporting code. It is the interface for accessing Manage application.|
+	|MEA|This bundle exposes the enterprise web services API. |
+	|Report|This bundle contains the code that is needed to enable BIRT Report Only Server (BROS). Used to separate out the work load that is related to execution of reports that are submitted from the Manage UI. |
+	|Cron|This bundle contains the code that is needed to run Manage cron tasks.|
 
 - **How to deploy a custom Java class?**
 
@@ -268,9 +280,9 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
  Admission Webhook|Admission webhooks are HTTP callbacks that receive admission requests <br> and do something with them.|We are using them to control the product matrix as part of the <br> deployment process(eg cannot install both HSE and Oil & Gas).|
 |Ansible|Ansible is an open-source software provisioning, configuration management, <br> and application-deployment tool enabling infrastructure as code.|<br>Used for deploying pods 
 |ConfigMap|Config maps hold configuration data for pods to consume. This is <br> similar to a property file.|Internally generated from CR|	
-|CR<br>(Custom Resource)|A resource implemented through the Kubernetes CustomResourceDefinition <br>API. A resource is an endpoint in the Kubernetes API that stores a collection <br>of API objects of a certain kind; for example, the built-in pods resource contains <br>a collection of Pod objects. A custom resource is distinct from the built-in <br>Kubernetes resources, such as the pod and service resources. Every <br>CR is part of an API group.|Manage CRs: <br>  * ManageApp <br>  * ManageWorkspace <br>  * ManageBuild <br>  * ManageDeployment <br>  * ManageAppStatus<br> * ManageServerBundles <br> <br>  * BuildDataInterpreter (for ACM)|
+|CR<br>(Custom Resource)|A resource implemented through the Kubernetes CustomResourceDefinition <br>API. A resource is an endpoint in the Kubernetes API that stores a collection of <br>API objects of a certain kind; for example, the built-in pods resource contains <br>a collection of Pod objects. A custom resource is distinct from the built-in <br>Kubernetes resources, such as the pod and service resources. Every CR is <br> part of an API group.|Manage CRs: <br>  * ManageApp <br>  * ManageWorkspace <br>  * ManageBuild <br>  * ManageDeployment <br>  * ManageAppStatus<br> * ManageServerBundles <br> <br>  * BuildDataInterpreter (for ACM)|
 |CRD <br>(Custom Resource Definition)| Create a custom resource definition to define a new custom resource. CRD is <br> to CR as XSD is to XML. <br>|Manage CRs: <br> * ManageApp <br> * ManageWorkspace <br> * ManageBuild <br> * ManageDeployment <br> * ManageAppStatus<br><br> * ManageServerBundles <br> <br>* BuildDataInterpreter (for ACM)|
-|EFK (Elastic search, FluentD,<br>Kibana)|The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br><br> Once deployed in a cluster, the stack aggregates logs from all nodes and <br>projects into Elasticsearch, and provides a Kibana UI to view any logs. <br> <br>Cluster administrators can view all logs, but application developers can only <br> view logs for projects they have permission to view. <r>The stack components <br>communicate securely.| Used for Log Analysis |
+|EFK (Elastic search, FluentD,<br>Kibana)|The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br><br> Once deployed in a cluster, the stack aggregates logs from all nodes and projects <br>into Elasticsearch, and provides a Kibana UI to view any logs. <br> <br>Cluster administrators can view all logs, but application developers can only view <br>logs for projects they have permission to view. <r>The stack components <br>communicate securely.| Used for Log Analysis |
 |Entitled Registry|Where IBM stores the images for download and use in MAS|This is where we keep binaries that will be used to build an image.|
 |Image|An image is a binary that includes all of the requirements for running a single <br>container, as well as metadata describing its needs and capabilities.|This is what is deployed as Manage, Monitor, Assist, etc.|
 |Kafka|Apache Kafka is a framework implementation of a software bus using <br>stream-processing.|It is a pre-req for Monitor.  For Manage, it is an option that <br>can be used as a JMS queue alternative.|
@@ -284,11 +296,11 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |OIDP<br>(Open ID Provider)|An identity provider, or OpenID provider (OP) is a service that specializes in registering <br>OpenID URLs or XRIs.|Used for authentication between MAS and Manage|
 |Operator|Operators are software extensions to Kubernetes that make use of custom resources <br> to manage applications and their components.|Processing within MAS|
 |Persistent Volume|A PersistentVolume (PV) is similar to drive mapping. This API object captures <br>the details of the implementation of the storage, be that NFS, iSCSI, <br> or a cloud-provider-specific storage system.|In Manage we use PV to map with attached docs or other places where similar access <br>is needed.|
-|Pods|Pods are the smallest, most basic deployable objects in Kubernetes. A Pod represents <br>a single instance of a running process in your cluster. Pods contain one or more <br>containers, such as Docker containers. When a Pod runs multiple <br>containers, the containers are managed as a single entity and share the Pod's <br>resources.|Deploying a Maximo "server"|
+|Pods|Pods are the smallest, most basic deployable objects in Kubernetes. A Pod represents <br>a single instance of a running process in your cluster. Pods contain one or more <br>containers, such as Docker containers. When a Pod runs multiple containers, <br>the containers are managed as a single entity and share the Pod's resources.|Deploying a Maximo "server"|
 |RHEL<br>(RedHat Enterprise Linux)|Red Hat Enterprise Linux (RHEL) is a Linux-based operating system from Red Hat <br>designed for businesses. RHEL can work on desktops, on servers, in hypervisors <br>or in the cloud. Red Hat and its community-supported counterpart, Fedora,<br> are among the most widely used Linux distributions in the world.||
 |RHCOS<br>(RedHat Core Operating System)|The version of RHEL that comes as part of OCP|If you are installing on<br> bare metal, then this is the operating system being used|
 |Route|An OpenShift route is a way to expose a service by giving it an externally-reachable <br>hostname like www.example.com. A defined route and the endpoints identified by <br>its service can be consumed by a router to provide named connectivity that allows <br>external clients to reach your applications.|Replacement of IHS in EAM.  The route plus the service is used for external access.|
-|SCIM<br>(System for Cross-domain Identity <br>Management)|A set of standardized HTTP endpoints for searching, updating, and deleting user <br>records using JSON formatted data. It also includes standards and guidelines to define <br>how user data should be formatted and sent from an Identity provider <br>to an application (and vice-versa)|Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty|
+|SCIM<br>(System for Cross-domain Identity <br>Management)|A set of standardized HTTP endpoints for searching, updating, and deleting user <br>records using JSON formatted data. It also includes standards and guidelines to <br>define how user data should be formatted and sent from an Identity provider to <br>an application (and vice-versa)|Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty|
 |Scratch Image|A non-runnable image that is used to build the final image.|Each Industry Solution, Add-On and Customization package is a scratch image that is <br>combined with the base Manage image to create the finally deployed image in MAS|
 |Service Bindings|A way to create a Kubernetes-wide specification for communicating service <br> secrets to applications in an automated way.||
 |Service Bundle/workload|Part of the CR/CRD definition in regards to the various Manage server types|Denotes type and number of Manage pods - UI, Cron, MEA, Report, All, etc|
