@@ -151,15 +151,15 @@
 - **How can we achieve a similar functionality as multiple JVMs (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionalities accordingly?**
 	
 	<span style="color:navy">The Manage application can be deployed with different server bundles (workloads) for the processing and isolation needs.</span>
-	
     <span style="color:navy">This table below shows the five different server bundles types: </span>
 	
-	|**Bundle Server Type**|**Description**|
+	|<span style="color:navy">Bundle Server Type|Description</span>|
+	|------|-------|
 	|<span style="color:navy">All|This bundle type contains all the code.</span>|
-	|UI|This bundle type contains UI code and supporting code. It is the interface for accessing Manage application.|
-	|MEA|This bundle exposes the enterprise web services API. |
-	|Report|This bundle contains the code that is needed to enable BIRT Report Only Server (BROS). Used to separate out the work load that is related to execution of reports that are submitted from the Manage UI. |
-	|Cron|This bundle contains the code that is needed to run Manage cron tasks.|
+	|<span style="color:navy">UI|This bundle type contains UI code and supporting code. It is the interface for accessing Manage application.</span>|
+	|<span style="color:navy">MEA|This bundle exposes the enterprise web services API. </span>|
+	|<span style="color:navy">Report|This bundle contains the code that is needed to enable BIRT Report Only Server (BROS). Used to separate out the work load that is related to execution of reports that are submitted from the Manage UI. </span>|
+	|<span style="color:navy">Cron|This bundle contains the code that is needed to run Manage cron tasks. </span>|
 
 - **How to deploy a custom Java class?**
 
