@@ -275,8 +275,8 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 ## Terminolgy
 
-| Term | Description | Used For |
-|------|-------|-------|
+|Term|Description|Used For|
+|------|-----|-----|
  Admission Webhook|Admission webhooks are HTTP callbacks that receive admission requests <br> and do something with them.|We are using them to control the product matrix as part of the <br> deployment process(eg cannot install both HSE and Oil & Gas).|
 |Ansible|Ansible is an open-source software provisioning, configuration management, <br> and application-deployment tool enabling infrastructure as code.|<br>Used for deploying pods 
 |ConfigMap|Config maps hold configuration data for pods to consume. This is <br> similar to a property file.|Internally generated from CR|	
