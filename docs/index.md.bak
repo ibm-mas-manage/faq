@@ -241,7 +241,7 @@
 
 	- <span style="color:navy">Patches are periodically released with APAR fixes. It can be applied using MAS Admin UI manually or automatically if you have subscription.</span>
 	
-	- <span style="color:navy">LA(one-off) fixes can be applied using customization archive.</span>
+	- <span style="color:navy">LA(one-off) fixes can be applied using customization archieve.</span>
 
 
 - **What is the rollback process when a patch fails at the app layer or the db layer**
