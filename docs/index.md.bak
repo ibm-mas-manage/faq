@@ -48,7 +48,7 @@
 - **Are there specific requirements for a multi-tenancy environment?**
 
 	<span style="color:navy">
-	Multi Tenancy is not yet supported in OpenShift.
+	Multi-Tenancy is not yet supported in OpenShift.
 	</span>
 
 - **Does OpenShift allow dynamic scaling?**

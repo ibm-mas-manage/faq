@@ -1,4 +1,4 @@
-# FAQs (MAS 8.8/Manage 8.5)
+# FAQs (MAS 8.8/Manage 8.4)
 
 ## Manage FAQs
 
