@@ -156,10 +156,10 @@
 	|<span style="color:navy">Bundle Server Type|Description</span>|
 	|------|-------|
 	|<span style="color:navy">All|This bundle type contains all the code.</span>|
-	|<span style="color:navy">UI|This bundle type contains UI code and supporting code. It is the interface for accessing Manage application.</span>|
+	|<span style="color:navy">UI|This bundle type contains UI code and supporting code. <br>It is the interface for accessing Manage application.</span>|
 	|<span style="color:navy">MEA|This bundle exposes the enterprise web services API. </span>|
-	|<span style="color:navy">Report|This bundle contains the code that is needed to enable BIRT Report Only Server (BROS). Used to separate out the work load that is related to execution of reports that are submitted from the Manage UI. </span>|
-	|<span style="color:navy">Cron|This bundle contains the code that is needed to run Manage cron tasks. </span>|
+	|<span style="color:navy">Report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI. </span>|
+	|<span style="color:navy">Cron|This bundle contains the code that is needed to run <br> Manage cron tasks. </span>|
 
 - **How to deploy a custom Java class?**
 
