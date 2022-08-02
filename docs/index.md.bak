@@ -56,13 +56,13 @@
 - **Does OpenShift allow dynamic scaling?**
 
 	<span style="color:navy">
-	Yes, but MAS is not fully there yet.
+	Yes, but MAS does not fully support it yet.
 	</span>
 
 - **Is the hypervisor something IBM provides or is that open source?**
 
 	<span style="color:navy">
-	There are different hypervisor products. Windows server datacenter solution provides windows hypervisor license.
+	There are different hypervisor products. IBM does not provide hypervisor.
 	</span>
 	
   
@@ -148,6 +148,18 @@
 	<span style="color:navy">Detailed Instructions:</span>
 		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
 		
+- **How can we achieve a similar functionality as multiple JVMs (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionalities accordingly?**
+	
+	<span style="color:navy">The Manage application can be deployed with different server bundles (workloads) for the processing and isolation needs.</span>
+	
+    <span style="color:navy">This table below shows the five different server bundles types: </span>
+	
+	|**Bundle Server Type**|**Description**|
+	|<span style="color:navy">All</span>| <span style="color:navy">This bundle type contains all the code.</span>|
+	|UI|This bundle type contains UI code and supporting code. It is the interface for accessing Manage application.|
+	|MEA|This bundle exposes the enterprise web services API. |
+	|Report|This bundle contains the code that is needed to enable BIRT Report Only Server (BROS). Used to separate out the work load that is related to execution of reports that are submitted from the Manage UI. |
+	|Cron|This bundle contains the code that is needed to run Manage cron tasks.|
 
 - **How to deploy a custom Java class?**
 
@@ -270,7 +282,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |ConfigMap|Config maps hold configuration data for pods to consume. This is <br> similar to a property file.|Internally generated from CR|	
 |CR<br>(Custom Resource)|A resource implemented through the Kubernetes CustomResourceDefinition <br>API. A resource is an endpoint in the Kubernetes API that stores a collection of <br>API objects of a certain kind; for example, the built-in pods resource contains <br>a collection of Pod objects. A custom resource is distinct from the built-in <br>Kubernetes resources, such as the pod and service resources. Every CR is <br> part of an API group.|Manage CRs: <br>  * ManageApp <br>  * ManageWorkspace <br>  * ManageBuild <br>  * ManageDeployment <br>  * ManageAppStatus<br> * ManageServerBundles <br> <br>  * BuildDataInterpreter (for ACM)|
 |CRD <br>(Custom Resource Definition)| Create a custom resource definition to define a new custom resource. CRD is <br> to CR as XSD is to XML. <br>|Manage CRs: <br> * ManageApp <br> * ManageWorkspace <br> * ManageBuild <br> * ManageDeployment <br> * ManageAppStatus<br><br> * ManageServerBundles <br> <br>* BuildDataInterpreter (for ACM)|
-|EFK (Elastic search, FluentD,<br>Kibana)|The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br><br> Once deployed in a cluster, the stack aggregates logs from all nodes and <br>projects into Elasticsearch, and provides a Kibana UI to view any logs. <br> <br>Cluster administrators can view all logs, but application developers can only <br> view logs for projects they have permission to view. <r>The stack components <br>communicate securely.| Used for Log Analysis |
+|EFK (Elastic search, FluentD,<br>Kibana)|The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br><br> Once deployed in a cluster, the stack aggregates logs from all nodes and projects <br>into Elasticsearch, and provides a Kibana UI to view any logs. <br> <br>Cluster administrators can view all logs, but application developers can only view <br>logs for projects they have permission to view. <r>The stack components <br>communicate securely.| Used for Log Analysis |
 |Entitled Registry|Where IBM stores the images for download and use in MAS|This is where we keep binaries that will be used to build an image.|
 |Image|An image is a binary that includes all of the requirements for running a single <br>container, as well as metadata describing its needs and capabilities.|This is what is deployed as Manage, Monitor, Assist, etc.|
 |Kafka|Apache Kafka is a framework implementation of a software bus using <br>stream-processing.|It is a pre-req for Monitor.  For Manage, it is an option that <br>can be used as a JMS queue alternative.|

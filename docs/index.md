@@ -56,13 +56,13 @@
 - **Does OpenShift allow dynamic scaling?**
 
 	<span style="color:navy">
-	Yes, but MAS is not fully there yet.
+	Yes, but MAS does not fully support it yet.
 	</span>
 
 - **Is the hypervisor something IBM provides or is that open source?**
 
 	<span style="color:navy">
-	There are different hypervisor products. Windows server datacenter solution provides windows hypervisor license.
+	There are different hypervisor products. IBM does not provide hypervisor.
 	</span>
 	
   
@@ -148,6 +148,18 @@
 	<span style="color:navy">Detailed Instructions:</span>
 		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
 		
+- **How can we achieve a similar functionality as multiple JVMs (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionalities accordingly?**
+	
+	<span style="color:navy">The Manage application can be deployed with different server bundles (workloads) for the processing and isolation needs.</span>
+	
+    <span style="color:navy">This table below shows the five different server bundles types: </span>
+	
+	|**Bundle Server Type**|**Description**|
+	|<span style="color:navy">All|This bundle type contains all the code.</span>|
+	|UI|This bundle type contains UI code and supporting code. It is the interface for accessing Manage application.|
+	|MEA|This bundle exposes the enterprise web services API. |
+	|Report|This bundle contains the code that is needed to enable BIRT Report Only Server (BROS). Used to separate out the work load that is related to execution of reports that are submitted from the Manage UI. |
+	|Cron|This bundle contains the code that is needed to run Manage cron tasks.|
 
 - **How to deploy a custom Java class?**
 
