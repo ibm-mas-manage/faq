@@ -4,7 +4,7 @@
 
 - **What are the benefits of moving to OpenShift?**
 
-	<span style="color:navy">There are a number of items:</span>
+	<span style="color:navy">There are number of benefits:</span>
 	
 	- <span style="color:navy">Portability between cloud/on-prem environments</span>
 	- <span style="color:navy">Faster deployment compared to the traditional deployment model</span>
@@ -27,7 +27,7 @@
 	</span>
 
  
-- **Can you please elaborate on IBM container registry (icr.io)?**
+- **Can you elaborate on IBM container registry (icr.io)?**
 	
 	<span style="color:navy">
 	All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
@@ -64,7 +64,6 @@
 	<span style="color:navy">
 	There are different hypervisor products. IBM does not provide hypervisor.
 	</span>
-	
   
 - **What environment changes require application outages for users?**
 
@@ -273,7 +272,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
 
 
-## Terminolgy
+## Terminology
 
 |Term|Description|Used For|
 |------|-----|-----|
@@ -299,7 +298,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |Pods|Pods are the smallest, most basic deployable objects in Kubernetes. A <br>pod represents a single instance of a running process in your cluster. <br>Pods contain one or more containers, such as Docker containers. When <br>a pod runs multiple containers, the containers are managed as a single <br>entity and share the Pod's resources.|Deploying a Maximo "server"|
 |RHEL<br>(RedHat Enterprise Linux)|Red Hat Enterprise Linux (RHEL) is a Linux-based operating system <br>from Red Hat designed for businesses. RHEL can work on desktops, <br>on servers, in hypervisors or in the cloud. Red Hat and its community-<br>supported counterpart, Fedora,is among the most widely used Linux <br> distributions in the world.||
 |RHCOS<br>(RedHat Core Operating System)|The version of RHEL that comes as part of OCP|If you are installing on<br> bare metal, then this is the operating system being used|
-|Route|An OpenShift route is a way to expose a service by giving it an externally-<br>reachable <br>hostname like www.example.com. A defined route and the <br> endpoints identified by its service can be consumed by a router to provide <br>named connectivity that allows external clients to reach your applications.|Replacement of IHS in EAM.  The route plus the service is used for external access.|
+|Route|An OpenShift route is a way to expose a service by giving it an externally-<br>reachable hostname like www.example.com. A defined route and the <br> endpoints identified by its service can be consumed by a router to provide <br>named connectivity that allows external clients to reach your applications.|Replacement of IHS in EAM.  The route plus the service is used for external access.|
 |SCIM<br>(System for Cross-domain Identity <br>Management)|A set of standardized HTTP endpoints for searching, updating, and deleting <br> user records using JSON formatted data. It also includes standards and <br>guidelines to define how user data should be formatted and sent from an <br>Identity provider to an application (and vice-versa)|Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty|
 |Scratch Image|A non-runnable image that is used to build the final image.|Each Industry Solution, Add-On and Customization package is a scratch image that is <br>combined with the base Manage image to create the finally deployed image in MAS|
 |Service Bindings|A way to create a Kubernetes-wide specification for communicating <br>service secrets to applications in an automated way.||
