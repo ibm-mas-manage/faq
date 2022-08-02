@@ -4,7 +4,7 @@
 
 - **What are the benefits of moving to OpenShift?**
 
-	<span style="color:navy">There are a number of items:</span>
+	<span style="color:navy">There are number of benefits:</span>
 	
 	- <span style="color:navy">Portability between cloud/on-prem environments</span>
 	- <span style="color:navy">Faster deployment compared to the traditional deployment model</span>
@@ -27,7 +27,7 @@
 	</span>
 
  
-- **Can you please elaborate on IBM container registry (icr.io)?**
+- **Can you elaborate on IBM container registry (icr.io)?**
 	
 	<span style="color:navy">
 	All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
@@ -64,7 +64,6 @@
 	<span style="color:navy">
 	There are different hypervisor products. IBM does not provide hypervisor.
 	</span>
-	
   
 - **What environment changes require application outages for users?**
 
@@ -273,7 +272,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring>
 
 
-## Terminolgy
+## Terminology
 
 |Term|Description|Used For|
 |------|-----|-----|
@@ -307,6 +306,6 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 |SLS<br>(Suite License Server)|This is the server that process AppPoints|AppPoints|
 |UBI<br>(Universal Base Image)|A vehicle for building and delivering certified containers and operators|Used as a base for creating the Manage image(s). <br>Manage uses the RedHat UBI and Liberty UBI.|
 |Watches|An operator subscription to the create/change/delete event of certain OCP <br>resources. These are specifid in watches.yaml and used internally only.|Allows for processing new selections of deployment (for example, add a language)|
-|Workspace|An aggregation of namespaces used to create a MAS sub-instance. In 8.5 <br> and earlier there is always only one workspace.  In the future, within MAS <br>one could define different workspaces.|Similar to Namespace, but this is for MAS as a whole. Each workspace could have <br>a different configuration. This would be useful for sharing <br>a MAS instance between dev and QA environments.|
+|Workspace|An aggregation of namespaces used to create a MAS sub-instance. In 8.5 <br> and earlier there is always only one workspace.  In the future, within MAS <br>one could define different workspaces.|Similar to Namespace, but this is for MAS as a whole. Each workspace could have <br>a different configuration. This would be useful for sharing a MAS instance between <br>dev and QA environments.|
 |YAML<br>(YAML Aint Markup Language)|YAML is a human-readable data-serialization language. It is commonly <br>used for configuration files and in applications where data is being <br> stored or transmitted.|Used to define CRDs/CRs|
 
