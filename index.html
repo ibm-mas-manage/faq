@@ -395,17 +395,17 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>CR<br>(Custom Resource)</td>
-<td>A resource implemented through the Kubernetes CustomResourceDefinition <br>API. A resource is an endpoint in the Kubernetes API that stores a collection of <br>API objects of a certain kind; for example, the built-in pods resource contains <br>a collection of Pod objects. A custom resource is distinct from the built-in <br>Kubernetes resources, such as the pod and service resources. Every CR is <br> part of an API group.</td>
+<td>A resource implemented through the Kubernetes Custom Resource <br> Definition  API. A resource is an endpoint in the Kubernetes API that stores <br> a collection of API objects of a certain kind; for example, the built-in pod's <br>resource contains a collection of Pod objects. A custom resource is distinct <br>from the built-in <br>Kubernetes resources, such as the pod and service <br>resources. Every CR is <br> part of an API group.</td>
 <td>Manage CRs: <br>  * ManageApp <br>  * ManageWorkspace <br>  * ManageBuild <br>  * ManageDeployment <br>  * ManageAppStatus<br> * ManageServerBundles <br> <br>  * BuildDataInterpreter (for ACM)</td>
 </tr>
 <tr>
 <td>CRD <br>(Custom Resource Definition)</td>
-<td>Create a custom resource definition to define a new custom resource. CRD is <br> to CR as XSD is to XML. <br></td>
+<td>Create a custom resource definition to define a new custom resource. CRD <br> is to CR as XSD is to XML. <br></td>
 <td>Manage CRs: <br> * ManageApp <br> * ManageWorkspace <br> * ManageBuild <br> * ManageDeployment <br> * ManageAppStatus<br><br> * ManageServerBundles <br> <br>* BuildDataInterpreter (for ACM)</td>
 </tr>
 <tr>
 <td>EFK (Elastic search, FluentD,<br>Kibana)</td>
-<td>The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br><br> Once deployed in a cluster, the stack aggregates logs from all nodes and projects <br>into Elasticsearch, and provides a Kibana UI to view any logs. <br> <br>Cluster administrators can view all logs, but application developers can only view <br>logs for projects they have permission to view. <r>The stack components <br>communicate securely.</td>
+<td>The EFK stack is a modified version of the ELK stack and is comprised of:<br> * Elasticsearch: An object store where all logs are stored.<br>  * Fluentd: Gathers logs from nodes and feeds them to Elasticsearch. <br> * Kibana: A web UI for Elasticsearch. <br><br> Once deployed in a cluster, the stack aggregates logs from all nodes and <br>projects <br>into Elasticsearch, and provides a Kibana UI to view any logs. <br> <br>Cluster administrators can view all logs, but application developers can <br> only view logs for projects they have permission to view. The stack <br>components <br>communicate securely.</td>
 <td>Used for Log Analysis</td>
 </tr>
 <tr>
@@ -415,7 +415,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Image</td>
-<td>An image is a binary that includes all of the requirements for running a single <br>container, as well as metadata describing its needs and capabilities.</td>
+<td>An image is a binary that includes all of the requirements for running a <br>single <br>container, as well as metadata describing its needs and capabilities.</td>
 <td>This is what is deployed as Manage, Monitor, Assist, etc.</td>
 </tr>
 <tr>
@@ -440,12 +440,12 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>MongoDB</td>
-<td>A NoSQL database - a document database, which means it stores data in JSON-like <br>documents.</td>
+<td>A NoSQL database - a document database, which means it stores data in <br>JSON-like documents.</td>
 <td>MAS user and license metric information is stored here</td>
 </tr>
 <tr>
 <td>Namespace/Project</td>
-<td>Kubernetes provides a partitioning of the resources it manages into non-overlapping <br> sets called namespaces</td>
+<td>Kubernetes provides a partitioning of the resources it manages into <br>non-overlapping <br> sets called namespaces</td>
 <td>In MAS, there is a namespace for Manage, a namespace for Assist, etc. <br> In the future, there can be multiple instances of an application(eg Manage)<br> per namespace.</td>
 </tr>
 <tr>
@@ -460,27 +460,27 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>OIDP<br>(Open ID Provider)</td>
-<td>An identity provider, or OpenID provider (OP) is a service that specializes in registering <br>OpenID URLs or XRIs.</td>
+<td>An identity provider, or OpenID provider (OP) is a service that specializes <br>in registering OpenID URLs or XRIs.</td>
 <td>Used for authentication between MAS and Manage</td>
 </tr>
 <tr>
 <td>Operator</td>
-<td>Operators are software extensions to Kubernetes that make use of custom resources <br> to manage applications and their components.</td>
+<td>Operators are software extensions to Kubernetes that make use of custom <br>resources to manage applications and their components.</td>
 <td>Processing within MAS</td>
 </tr>
 <tr>
 <td>Persistent Volume</td>
-<td>A PersistentVolume (PV) is similar to drive mapping. This API object captures <br>the details of the implementation of the storage, be that NFS, iSCSI, <br> or a cloud-provider-specific storage system.</td>
+<td>A PersistentVolume (PV) is similar to drive mapping. This API object <br>captures the details of the implementation of the storage, be that NFS, <br>iSCSI, or a cloud-provider-specific storage system.</td>
 <td>In Manage we use PV to map with attached docs or other places where similar access <br>is needed.</td>
 </tr>
 <tr>
 <td>Pods</td>
-<td>Pods are the smallest, most basic deployable objects in Kubernetes. A Pod represents <br>a single instance of a running process in your cluster. Pods contain one or more <br>containers, such as Docker containers. When a Pod runs multiple containers, <br>the containers are managed as a single entity and share the Pod's resources.</td>
+<td>Pods are the smallest, most basic deployable objects in Kubernetes. A <br>Pod represents a single instance of a running process in your cluster. <br>Pods contain one or more containers, such as Docker containers. When <br>a Pod runs multiple containers, the containers are managed as a single <br>entity and share the Pod's resources.</td>
 <td>Deploying a Maximo "server"</td>
 </tr>
 <tr>
 <td>RHEL<br>(RedHat Enterprise Linux)</td>
-<td>Red Hat Enterprise Linux (RHEL) is a Linux-based operating system from Red Hat <br>designed for businesses. RHEL can work on desktops, on servers, in hypervisors <br>or in the cloud. Red Hat and its community-supported counterpart, Fedora,<br> are among the most widely used Linux distributions in the world.</td>
+<td>Red Hat Enterprise Linux (RHEL) is a Linux-based operating system <br>from Red Hat designed for businesses. RHEL can work on desktops, <br>on servers, in hypervisors or in the cloud. Red Hat and its community-<br>supported counterpart, Fedora,is among the most widely used Linux <br> distributions in the world.</td>
 <td></td>
 </tr>
 <tr>
@@ -490,12 +490,12 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Route</td>
-<td>An OpenShift route is a way to expose a service by giving it an externally-reachable <br>hostname like www.example.com. A defined route and the endpoints identified by <br>its service can be consumed by a router to provide named connectivity that allows <br>external clients to reach your applications.</td>
+<td>An OpenShift route is a way to expose a service by giving it an externally-<br>reachable <br>hostname like www.example.com. A defined route and the <br> endpoints identified by its service can be consumed by a router to provide <br>named connectivity that allows external clients to reach your applications.</td>
 <td>Replacement of IHS in EAM.  The route plus the service is used for external access.</td>
 </tr>
 <tr>
 <td>SCIM<br>(System for Cross-domain Identity <br>Management)</td>
-<td>A set of standardized HTTP endpoints for searching, updating, and deleting user <br>records using JSON formatted data. It also includes standards and guidelines to <br>define how user data should be formatted and sent from an Identity provider to <br>an application (and vice-versa)</td>
+<td>A set of standardized HTTP endpoints for searching, updating, and deleting <br> user records using JSON formatted data. It also includes standards and <br>guidelines to <br>define how user data should be formatted and sent from an <br>Identity provider to an application (and vice-versa)</td>
 <td>Internally used for <br>LDAP processing between MAS and Manage via WAS Liberty</td>
 </tr>
 <tr>
@@ -505,7 +505,7 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Service Bindings</td>
-<td>A way to create a Kubernetes-wide specification for communicating service <br> secrets to applications in an automated way.</td>
+<td>A way to create a Kubernetes-wide specification for communicating <br>service secrets to applications in an automated way.</td>
 <td></td>
 </tr>
 <tr>
@@ -525,17 +525,17 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 </tr>
 <tr>
 <td>Watches</td>
-<td>An operator subscription to the create/change/delete event of certain OCP resources. <br>These are specifid in watches.yaml and used internally only.</td>
+<td>An operator subscription to the create/change/delete event of certain OCP <br>resources. These are specifid in watches.yaml and used internally only.</td>
 <td>Allows for processing new selections of deployment (for example, add a language)</td>
 </tr>
 <tr>
 <td>Workspace</td>
-<td>An aggregation of namespaces used to create a MAS sub-instance. In 8.5 and earlier <br> there is always only one workspace.  In the future, within MAS one could <br>define different workspaces.</td>
-<td>Similar to Namespace, but this is for MAS as a whole.  Each workspace could have <br>a different configuration. This would be useful for sharing <br>a MAS instance between dev and QA environments.</td>
+<td>An aggregation of namespaces used to create a MAS sub-instance. In 8.5 <br> and earlier there is always only one workspace.  In the future, within MAS <br>one could define different workspaces.</td>
+<td>Similar to Namespace, but this is for MAS as a whole. Each workspace could have <br>a different configuration. This would be useful for sharing <br>a MAS instance between dev and QA environments.</td>
 </tr>
 <tr>
 <td>YAML<br>(YAML Aint Markup Language)</td>
-<td>YAML is a human-readable data-serialization language. It is commonly used for <br>configuration files and in applications where data is being <br> stored or transmitted.</td>
+<td>YAML is a human-readable data-serialization language. It is commonly <br>used for configuration files and in applications where data is being <br> stored or transmitted.</td>
 <td>Used to define CRDs/CRs</td>
 </tr>
 </tbody>
@@ -586,5 +586,5 @@ Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</spa
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-02 02:57:08.654725+00:00
+Build Date UTC : 2022-08-02 04:43:04.528610+00:00
 -->
