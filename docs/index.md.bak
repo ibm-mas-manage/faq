@@ -157,7 +157,7 @@
 	|MEA|This bundle exposes the enterprise web services API.|
 	|Report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
 	|Cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
-	|JMS Server bundle|This bundle is for JMS messaging|
+	|StandaloneJMS|This bundle is for [Liberty Server JMS messaging](https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=deploy-configuring-java-message-service-jms-servers).|
 
 - **How to deploy a custom Java class?**
 
