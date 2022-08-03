@@ -40,7 +40,7 @@
 	Windows is not supported. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 	</span>
 
-- **What is the one big limitation of moving to OpenShift?**
+- **Are there any limitations to moving to OpenShift?**
 	
 	- <span style="color:navy">Potentially more hardware is needed for smaller installations.</span>
 	- <span style="color:navy">Short term learning curve (like any new technology).</span>
@@ -157,6 +157,7 @@
 	|MEA|This bundle exposes the enterprise web services API.|
 	|Report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
 	|Cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
+	|StandaloneJMS|This bundle is for [Liberty Server JMS messaging](https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=deploy-configuring-java-message-service-jms-servers).|
 
 - **How to deploy a custom Java class?**
 
