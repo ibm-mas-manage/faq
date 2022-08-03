@@ -40,7 +40,7 @@
 	Windows is not supported. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 	</span>
 
-- **What is the one big limitation of moving to OpenShift?**
+- **Are there any limitations to moving to OpenShift?**
 	
 	- <span style="color:navy">Potentially more hardware is needed for smaller installations.</span>
 	- <span style="color:navy">Short term learning curve (like any new technology).</span>
@@ -152,11 +152,12 @@
 	
 	|Bundle Server Type|Description|
 	|------|-------|
-	|All|This bundle type contains all the code.|
-	|UI|This bundle type contains UI code and supporting code. <br>It is the interface for accessing Manage application.|
-	|MEA|This bundle exposes the enterprise web services API.|
-	|Report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
-	|Cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
+	|all|This bundle type contains all the code.|
+	|ui|This bundle type contains UI code and supporting code. <br>It is the interface for accessing Manage application.|
+	|mea|This bundle exposes the enterprise web services API.|
+	|report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
+	|cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
+	|standalonejms|This bundle is for Liberty Server JMS messaging, used by Manage Integration Framework as the default JMS provider.|
 
 - **How to deploy a custom Java class?**
 
