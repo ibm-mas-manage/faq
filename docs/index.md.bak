@@ -152,12 +152,12 @@
 	
 	|Bundle Server Type|Description|
 	|------|-------|
-	|All|This bundle type contains all the code.|
-	|UI|This bundle type contains UI code and supporting code. <br>It is the interface for accessing Manage application.|
-	|MEA|This bundle exposes the enterprise web services API.|
-	|Report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
-	|Cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
-	|StandaloneJMS|This bundle is for [Liberty Server JMS messaging](https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=deploy-configuring-java-message-service-jms-servers).|
+	|all|This bundle type contains all the code.|
+	|ui|This bundle type contains UI code and supporting code. <br>It is the interface for accessing Manage application.|
+	|mea|This bundle exposes the enterprise web services API.|
+	|report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
+	|cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
+	|standalonejms|This bundle is for [Liberty Server JMS messaging](https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=deploy-configuring-java-message-service-jms-servers).|
 
 - **How to deploy a custom Java class?**
 
