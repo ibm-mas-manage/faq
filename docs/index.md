@@ -4,30 +4,30 @@
 
 - **What are the benefits of moving to OpenShift?**
 
-	<span style="color:navy">There are number of benefits:</span>
+	<span style="color:navy">Some of the benefits are:</span>
 	
 	- <span style="color:navy">Portability between cloud/on-prem environments</span>
 	- <span style="color:navy">Faster deployment compared to the traditional deployment model</span>
-	- <span style="color:navy">More robust, resilient, HA, and elasticity through containerization and container orchestration</span>
-	- <span style="color:navy">Consistency through the operator model, repeatable deployment</span> 
+	- <span style="color:navy">More robust, resilient, high availability, and elasticity through containerization and container orchestration</span>
+	- <span style="color:navy">Consistency per the operator model, repeatable deployment</span> 
 	- <span style="color:navy">Capabilities for automating and streamlining the development process</span>
  
  
-- **Do the operators need a special configuration?**
+- **Do the operators need special configuration?**
 
 	<span style="color:navy">
-	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operators’ configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
+	Operators do not need any special configuration - their actions are driven by the CR (Custom Resource). Operators are the backbone of the automation in OpenShift/Kubernetes.  The operator's configuration is provided by the administrator via the MAS/Manage admin UI.  Behind the scenes, this UI updates the CR (which can also be manually changed). The operators run as pods in the OCP cluster.
 	</span>
 
 
-- **What is the use of the ingress controller?**
+- **What is the purpose of the ingress controller?**
 
     <span style="color:navy">
-	Ingress controller is OpenShift/Kubernetes means of exposing the service endpoint and load balancing to your applications.
+	Ingress controller is OpenShift/Kubernetes way of exposing the service endpoint and load balancing to your applications.
 	</span>
 
  
-- **Can you elaborate on IBM container registry (icr.io)?**
+- **Can you elaborate on the IBM container registry (icr.io)?**
 	
 	<span style="color:navy">
 	All IBM products’ images are stored there. The images are accessible if you purchased the product thus obtain an entitlement key. The entitlement key is to be provided when installing MAS, and the MAS and other application operators use this entitlement key to pull the images from icr.io.
@@ -48,7 +48,7 @@
 - **Are there specific requirements for a multi-tenancy environment?**
 
 	<span style="color:navy">
-	Multi-Tenancy is not yet supported in OpenShift.
+	Multi-Tenant Manage is not yet supported in MAS.
 	</span>
 
 - **Does OpenShift allow dynamic scaling?**
@@ -60,7 +60,7 @@
 - **Is the hypervisor something IBM provides or is that open source?**
 
 	<span style="color:navy">
-	There are different hypervisor products. IBM does not provide hypervisor.
+	There are different hypervisor products. IBM does not provide any hypervisor.
 	</span>
   
 - **What environment changes require application outages for users?**
@@ -72,13 +72,13 @@
 - **What databases are supported?.**
 
 	<span style="color:navy">
-	All three databases (Db2, Db2 Warehouse, Oracle and SQL server) are supported for Manage.
+	All three databases (DB2,Oracle and SQL server) are supported for Manage.
 	</span>
 
 - **What Industry Solution/Add-ons are supported?**
 
 	<span style="color:navy">
-	All Industry Solutions/Add-ons are supported. Scheduler, Calibration, Linear are included in Manage. Life Sciences is covered via Calibration.
+	All Industry Solutions/Add-ons are supported. Scheduler, Calibration, and Linear are now all included in base Manage. Life Sciences is covered via Calibration.
 	</span>
 
 - **What languages are supported?**
@@ -109,7 +109,7 @@
 - **What authentication is needed for inbound HTTP/SOAP/REST-based integration to Manage?**
 
 	<span style="color:navy">
-	The API Key authentication is required for inbound HTTP/SOAP-based integration to Manage. The API Key can be generated from the Manage app. The HTTP request header must include the API Key. For REST-based integration, you can use OIDC as well as an API key for authentication.
+	API Key authentication is required for inbound HTTP/SOAP-based integration to Manage. The API Key can be generated from the Manage administration app. The HTTP request header must include the API Key. For REST-based integration, you can use OIDC as well as an API key for authentication.
 	</span>
     
 	
@@ -132,9 +132,9 @@
 	<span style="color:navy">Yes, BIRT is supported. Your reports will be moved automatically with the database upgrade.</span>
 
 
-- **How to restart Manage server (other than deleting pods or restarting pods)?**
+- **How does one restart the Manage server (other than deleting pods or restarting pods)?**
 
-	<span style="color:navy">You can start and stop Manage server using tools-api.</span>
+	<span style="color:navy">You can start and stop Manage server using the new tools-api.</span>
 	
 	- <span style="color:navy">Stop the Maximo Manage pods
 		- POST </span> <https://host:port/toolsapi/toolservice/managestop>
@@ -145,24 +145,24 @@
 	<span style="color:navy">Detailed Instructions:</span>
 		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
 		
-- **How can we achieve a similar functionality as multiple JVMs (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionalities accordingly?**
+- **Can we achieve the multiple JVMs functionality (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionality accordingly?**
 	
-	<span style="color:navy">The Manage application can be deployed with different server bundles (workloads) for the processing and isolation needs.</span>
-    <span style="color:navy">This table below shows the five different server bundles types: </span>
+	<span style="color:navy">The Manage application can be deployed with different server bundles (workloads) for processing and isolation needs.</span>
+    <span style="color:navy">The table below shows the different server bundles types: </span>
 	
 	|Bundle Server Type|Description|
 	|------|-------|
 	|all|This bundle type contains all the code.|
-	|ui|This bundle type contains UI code and supporting code. <br>It is the interface for accessing Manage application.|
+	|ui|This bundle type contains UI and supporting code. <br>It is the interface for accessing Manage application.|
 	|mea|This bundle exposes the enterprise web services API.|
-	|report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related to execution of reports that <br> are submitted from the Manage UI.|
+	|report|This bundle contains the code that is needed to enable <br> BIRT Report Only Server (BROS). Used to separate out <br>the work load that is related for execution of reports that <br> are submitted from the Manage UI.|
 	|cron|This bundle contains the code that is needed to run <br> Manage cron tasks.|
 	|standalonejms|This bundle is for Liberty Server JMS messaging, used by <br>Manage Integration Framework as the default JMS provider.|
 
 - **How to deploy a custom Java class?**
 
 	<span style="color:navy">
-	The custom Java classes need to be packaged as a customization archive. A customization archive is a zip file and its structure is the same as the Maximo/SMP folder structure. It can include Java classes, XMLs, and database scripts. You need to follow the product.xml standard for customization. A customization archive is specified as part of the Manage CR spec so that the build process can include it. It can be accessed through the HTTP(s) or FTP(s) endpoint. Multiple customization archives are supported
+	The custom Java classes need to be packaged as a customization archive. A customization archive is a zip file and its structure is the same as the Maximo/SMP folder structure. It can include Java classes, XML, and database scripts. You need to follow the product.xml standard for customization. A customization archive is specified as part of the Manage CR spec (via the Manage deployment UI) so that the build process can include it. It can be accessed through the HTTP(s) or FTP(s) endpoint. Multiple customization archives are supported.
 	</span>
 
 
@@ -187,7 +187,7 @@
 - **How can we integrate Cognos with MAS?**
 
 	<span style="color:navy">
-	Cognos is not supported in MAS 8.8. It is in the roadmap for MAS 8.9.
+	Cognos entitlement is not included with MAS 8.8. It is in the roadmap for MAS 8.9.
 	</span>
 	
 
@@ -198,15 +198,15 @@
 	<span style="color:navy">LDAP configuration:</span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=identity-ldap-user-registry-synchronization>
 
 
-- **How is SMTP server configured?**
+- **How is the SMTP server configured?**
 
-	<span style="color:navy">SMTP server is configured in MAS using MAS Admin UI.</span>
+	<span style="color:navy">SMTP server is configured in MAS using the MAS Admin UI.</span>
 	
 	<span style="color:navy">SMTP configuration: </span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=configuring-smtp-server>
 
-- **How certificates can be applied?**
+- **How can certificates be applied?**
 
-	<span style="color:navy">Cerificates can be applied from MAS Admin UI.</span>
+	<span style="color:navy">Cerificates can be applied via the MAS Admin UI.</span>
 	
 	<span style="color:navy">Certificate configuration: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
 	
@@ -218,7 +218,7 @@
 - **Are the Maximo users moved to MAS after upgrade?**
 
 	<span style="color:navy">
-	Yes, the Maximo users will be migrated to MAS from the existing Maximo (7612+) during the upgrade.</span>
+	Yes, the Maximo users will have an entry created in MAS from the existing Maximo (7.6.1.2+) system during the upgrade execution.</span>
 	
 	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
 
@@ -226,7 +226,7 @@
 - **What are the EAM to Manage gaps?**
 
 	<span style="color:navy">
-	The following features/functionalities are not supported yet but are in the roadmap: 
+	The following features/functionality are not supported yet, but are in the roadmap: 
 	</span>
 	
 	- <span style="color:navy">Password controls/policy (password length, expiration date etc.) </span>	
@@ -240,9 +240,9 @@
 ## Bug Fixes
 - **How do I apply bug fixes?**
 
-	- <span style="color:navy">Patches are periodically released with APAR fixes. It can be applied using MAS Admin UI manually or automatically if you have subscription.</span>
+	- <span style="color:navy">Patches are periodically released with APAR fixes. It can be applied using the MAS Admin UI manually or automatically if you have subscribed.</span>
 	
-	- <span style="color:navy">LA(one-off) fixes can be applied using customization archive.</span>
+	- <span style="color:navy">LA(one-off) fixes can be applied using the customization archive process.</span>
 
 
 - **What is the rollback process when a patch fails at the app layer or the db layer**
@@ -251,7 +251,7 @@
 	The rollback process include:
 	</span>
 	
-	- <span style="color:navy"> Roll back the configuration, which is the Manage Workspace CR and its associated secrets in the OpenShift Manage namespace.  The old image can be regenerated by the operator, or the old build can be specified to have the deployment point to revert back to what it was.</span>
+	- <span style="color:navy"> Roll back the configuration, which is the Manage Workspace CR and its associated secrets in the OpenShift Manage namespace.  The old image can be regenerated by the operator, or the old build can be specified to have the deployment revert back toa previous state.</span>
 	
 	- <span style="color:navy"> Restore the database. (Same as 7.6) </span>
 	
