@@ -234,7 +234,6 @@
 	- <span style="color:navy">Bulk user load in MAS </span>
 	- <span style="color:navy">Bring your own certificate in MAS </span>
 	- <span style="color:navy">MMI does not work for multiple servers </span>
-	- <span style="color:navy">Not fully airgap enabled </span>
 
 
 ## Bug Fixes
