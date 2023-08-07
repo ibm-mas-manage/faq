@@ -187,7 +187,7 @@
 - **How can we integrate Cognos with MAS?**
 
 	<span style="color:navy">
-	Cognos entitlement is not included with MAS 8.8. It is in the roadmap for MAS 8.9.
+	Cognos entitlement is included with MAS 8.10.
 	</span>
 	
 
