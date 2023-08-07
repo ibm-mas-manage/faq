@@ -37,7 +37,7 @@
 - **Are there options for organizations that are on windows or only options to provision new RHEL envs/move to cloud?**
 	
 	<span style="color:navy">
-	Windows is not supported. The provided link is for setting up a development environment: https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=administering-local-maximo-manage-development-environments. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
+	Windows is not supported. The provided link is for setting up a development environment: https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=administering-local-maximo-manage-development-environments. You have the option to run it on bare metal or in VSphere. Additionally, for more information, refer to: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 	</span>
 
 - **Are there any limitations to moving to OpenShift?**
@@ -213,14 +213,14 @@
 
 - **What is the upgrade process?**
 
-	<span style="color:navy">Upgrade Process: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-upgrading-maximo-environment>
+	<span style="color:navy">Upgrade Process: </span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=upgrading-from-maximo-asset-management-maximo-manage>
 
 - **Are the Maximo users moved to MAS after upgrade?**
 
 	<span style="color:navy">
 	Yes, the Maximo users will have an entry created in MAS from the existing Maximo (7.6.1.2+) system during the upgrade execution.</span>
 	
-	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=environment-managing-users-post-upgrade>
+	<span style="color:navy">Migrated Users: </span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=migrating-managing-users-post-upgrade>
 
 
 - **What are the EAM to Manage gaps?**
