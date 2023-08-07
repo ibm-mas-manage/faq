@@ -37,7 +37,7 @@
 - **Are there options for organizations that are on windows or only options to provision new RHEL envs/move to cloud?**
 	
 	<span style="color:navy">
-	Windows is not supported. The provided link is for setting up a development environment: https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=administering-local-maximo-manage-development-environments. You have the option to run it on bare metal or in VSphere. Additionally, for more information, refer to: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
+	Windows is not supported. The provided link is for setting up a development environment: <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=administering-local-maximo-manage-development-environments>. You have the option to run it on bare metal or in VSphere. Additionally, for more information, refer to: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 	</span>
 
 - **Are there any limitations to moving to OpenShift?**
