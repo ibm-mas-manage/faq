@@ -208,7 +208,7 @@
 
 	<span style="color:navy">Cerificates can be applied via the MAS Admin UI.</span>
 	
-	<span style="color:navy">Certificate configuration: </span> <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-certificates>
+	<span style="color:navy">Certificate configuration: </span> <https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=migrating-using-certificates>
 	
 
 - **What is the upgrade process?**
@@ -261,9 +261,6 @@
 
 <span style="color:navy">
 Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</span>
-<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=upgrading-from-maximo-asset-management-maximo-manage>
-
-<span style="color:navy">Manage in MAS:</span>
 <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb>
 
 <span style="color:navy">Maximo Application Suite:</span>
