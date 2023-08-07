@@ -37,7 +37,7 @@
 - **Are there options for organizations that are on windows or only options to provision new RHEL envs/move to cloud?**
 	
 	<span style="color:navy">
-	Windows is not supported. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
+	Windows is not supported. The provided link is for setting up a development environment: https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=administering-local-maximo-manage-development-environments. You can run on bare metal or in VSphere.  See also: <https://docs.openshift.com/container-platform/4.7/installing/index.html#supported-platforms-for-openshift-clusters_ocp-installation-overview>
 	</span>
 
 - **Are there any limitations to moving to OpenShift?**
@@ -142,8 +142,8 @@
 	- <span style="color:navy">Start the Maximo Manage pods.
 		- POST </span> <https://host:port/toolsapi/toolservice/managestart>
 	
-	<span style="color:navy">Detailed Instructions:</span>
-		<https://www.ibm.com/support/pages/how-use-new-tools-api-maximo-application-suite>
+	<span style="color:navy">Start/stop and more administration APIs:</span>
+		<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=reference-apis-administrative-utilities>
 		
 - **Can we achieve the multiple JVMs functionality (in Maximo v7.x) for different Maximo Manage entities (UI, Cron, Reporting, MIF) and segregate the functionality accordingly?**
 	
@@ -261,7 +261,7 @@
 
 <span style="color:navy">
 Upgrading from IBM Maximo Enterprise Asset Management to IBM Maximo Manage:</span>
-<https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=upgrading-from-maximo-enterprise-asset-management-maximo-manage>
+<https://www.ibm.com/docs/en/mas-cd/continuous-delivery?topic=upgrading-from-maximo-asset-management-maximo-manage>
 
 <span style="color:navy">Manage in MAS:</span>
 <https://www.ibm.com/docs/en/maximo-manage/continuous-delivery?topic=manage-integration#concept_ecy_3dv_5tb>
