@@ -1,4 +1,4 @@
-# FAQs (MAS/Manage)
+# FAQs 
 
 ## Manage FAQs
 
