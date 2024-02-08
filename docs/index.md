@@ -228,13 +228,32 @@
 	<span style="color:navy">
 	The following features/functionality are not supported yet, but are in the roadmap: 
 	</span>
-	
-	- <span style="color:navy">Password controls/policy (password length, expiration date etc.) </span>	
-	- <span style="color:navy">Disable/deactivate MAS user </span>
-	- <span style="color:navy">Bulk user load in MAS </span>
-	- <span style="color:navy">Bring your own certificate in MAS </span>
-	- <span style="color:navy">MMI does not work for multiple servers </span>
 
+	<span style="color:navy;font-weight:bold">Functional gaps</span>
+	- <span style="color:navy">E-Signature password should match with login password (LDAP/Local user)</span>
+	- <span style="color:navy">Configuration of login page and common header</span> 
+	- <span style="color:navy">User Self registration</span>
+	- <span style="color:navy">Guest User</span>
+	- <span style="color:navy">Allow LDAP synch mapping configuration</span>
+	- <span style="color:navy">Ability to add unsupported language</span>
+	- <span style="color:navy">Barcode font support</span>
+	- <span style="color:navy">Archiving guidance</span>
+	- <span style="color:navy">Configurable Email template for user management</span>
+	- <span style="color:navy">Force user logout or similar</span>
+	- <span style="color:navy">Ability to run custom metadata classes report</span>
+
+	<span style="color:navy;font-weight:bold">Authentication</span>
+	- <span style="color:navy">OpenID support in addition to SAML</span> 
+	- <span style="color:navy">Support multiple LDAPs</span>
+	- <span style="color:navy">Local user security controls parity</span>
+
+	<span style="color:navy;font-weight:bold">Platform</span>
+	- <span style="color:navy">Z Linux support</span>
+	- <span style="color:navy">Power support</span>
+
+	<span style="color:navy;font-weight:bold">Anywhere Migration</span>
+	- <span style="color:navy">Calibration</span>
+	- <span style="color:navy">Inventory - Transfer, Picking/Staging</span>
 
 ## Bug Fixes
 - **How do I apply bug fixes?**
