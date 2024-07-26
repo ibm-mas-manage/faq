@@ -122,7 +122,7 @@
 - **Is RMI supported?**
 
 	<span style="color:navy">
-	RMI is not supported outside of the Maximo server process. We recommend customers to leverage Maximo REST APIs instead of RMI. 
+	RMI is no longer. We recommend customers to leverage Maximo REST APIs instead of RMI. 
 	
 	RMI to Rest API: </span><https://ibm.box.com/s/5956jxr78i1bpihsvtrzub4wfb19p8o0>
 
